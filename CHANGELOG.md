@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased copied-label repair
+
+- Verify copied label metadata/shards against their acquired source and atomically restore mismatched or partial targets instead of trusting existence.
+- Matching copies are reused; interrupted repair preserves the prior target and permits retry. Actual Vesuvius-data replay restores identical decoded labels.
+- Acquisition/evaluator changes await review; no source labels, model scores or v0.2.0 assets changed.
+
 ## 0.2.0 - October 6, 2026
 
 - Exploratory boundary-padding and source-reference normalization diagnostics, reusing the official model and decoder with unchanged baseline settings.
