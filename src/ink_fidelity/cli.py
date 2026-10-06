@@ -56,6 +56,15 @@ def parse_args(argv=None):
     normalization.add_argument(
         "--out", type=Path, default=Path("artifacts/normalization-development")
     )
+    mirror = sub.add_parser("mirror-probe")
+    mirror.add_argument("--manifest", type=Path, default=Path("experiments/pilot.json"))
+    mirror.add_argument("--reference", type=Path, default=Path("reports/ct-pilot-records.json"))
+    mirror.add_argument("--out", type=Path, default=Path("artifacts/mirror-preflight"))
+    mirror.add_argument(
+        "--receipts", type=Path, default=Path("reports/mirror-source-receipts.json")
+    )
+    mirror.add_argument("--cache", type=Path, default=Path(".cache/http"))
+    mirror.add_argument("--expand", action="store_true")
     return parser.parse_args(argv)
 
 
@@ -63,7 +72,18 @@ def main(argv=None):
     args = parse_args(argv)
     logging.basicConfig(level=logging.WARNING)
     try:
-        if args.command == "normalization-study":
+        if args.command == "mirror-probe":
+            from .mirror_probe import mirror_probe
+
+            mirror_probe(
+                args.manifest,
+                args.reference,
+                args.out,
+                receipts_path=args.receipts,
+                cache=args.cache,
+                expand=args.expand,
+            )
+        elif args.command == "normalization-study":
             from .normalization_study import normalization_study
 
             normalization_study(args.results, args.manifest, args.artifacts, args.out)

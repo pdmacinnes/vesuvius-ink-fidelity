@@ -16,6 +16,7 @@ dependencies = [
 [project.optional-dependencies]
 report = ["matplotlib>=3.10", "scikit-image>=0.25"]
 test = ["pytest>=8.4", "ruff"]
+remote = ["fsspec==2025.9.0", "aiohttp==3.12.15"]
 
 [project.scripts]
 ink-fidelity = "ink_fidelity.cli:main"

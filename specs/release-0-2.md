@@ -26,10 +26,10 @@ Status: Patrick approved the research PR and continued work on October6,2026. Co
 
 ## Acceptance Criteria
 
-- [ ] Reviewed PR #3 merged manually; auto-merge remains OFF.
-- [ ] v0.2.0 version/docs identify reviewed diagnostics and negative outcomes accurately.
-- [ ] Existing34 local tests, lint and Windows/Linux CI pass.
-- [ ] Built wheel installs in isolation and its CLI/import/version smoke checks pass without GPU.
-- [ ] Original numerical records/manifests remain byte-identical; release assets exclude raw data/weights/secrets.
-- [ ] Public source release and wheel are available at a verified tag/commit.
-- [ ] Upstream novelty/integration evidence and a concrete request are recorded; no unauthorized message is sent.
+- [x] Reviewed PR #3 merged manually; auto-merge remains OFF.
+- [x] v0.2.0 version/docs identify reviewed diagnostics and negative outcomes accurately.
+- [x] Existing34 local tests, lint and Windows/Linux CI pass.
+- [x] Built wheel installs in isolation and its CLI/import/version smoke checks pass without GPU.
+- [x] Original numerical records/manifests remain byte-identical; release assets exclude raw data/weights/secrets.
+- [x] Public source release and wheel are available at a verified tag/commit.
+- [x] Upstream novelty/integration evidence and a concrete request are recorded; no unauthorized message is sent.

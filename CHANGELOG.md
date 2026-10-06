@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased mirror preflight
+
+- CPU-only parity check against the actual public volcomp mirror, with original global chunk coordinates, source receipts, bounded standard HTTP reads and optional historical rendering parity.
+- Explicit remote format/transport options and optional dependencies; corrected metadata autodetection and list/tuple normalization failures are retained as negative diagnostics.
+- This is a review candidate; no expanded compression recommendation or fresh model performance claim.
+
 ## Unreleased copied-label repair
 
 - Verify copied label metadata/shards against their acquired source and atomically restore mismatched or partial targets instead of trusting existence.

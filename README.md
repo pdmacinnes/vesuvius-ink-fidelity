@@ -92,6 +92,8 @@ scores = ink_metrics(labels, probabilities, supervision_mask, threshold=0.5)
 
 The release wheel contains the Python code. Commands still require the repository's manifests/reference reports and separately acquired upstream sources, native codec and models. Use the Windows setup from a checkout for the supported end-to-end path; the wheel alone is not a bundled dataset/model application.
 
+This research branch adds a CPU-only [actual mirror preflight](reports/MIRROR_PREFLIGHT.md), pending review. All98 registered native-CT chunks and both rendered input hashes match the existing local q8 baseline. `mirror-probe` checks three chunks; `mirror-probe --expand` covers the two prior development crops. This is bounded representation parity, not a general mirror-fidelity guarantee or new ink inference. Remote transport dependencies are available through `.[remote]` and the existing full Windows setup.
+
 ## Tests
 
 ```powershell
