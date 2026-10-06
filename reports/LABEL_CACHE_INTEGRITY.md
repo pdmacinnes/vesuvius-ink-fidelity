@@ -23,8 +23,8 @@ Refresh now compares each copied metadata/shard object with the verified source.
 
 ## Verification and limits
 
--39 local tests and lint pass on this independent branch. New tests cover valid-but-changed labels, truncated shard/metadata repair, interrupted replacement, healthy reuse and source checksum failure.
+- 39 local tests and lint pass on this independent branch. New tests cover valid-but-changed labels, truncated shard/metadata repair, interrupted replacement, healthy reuse and source checksum failure.
 - Both real-data corruption cases recover the original decoded hash exactly after refresh. Original trusted source files remain unchanged.
 - No GPU, model inference, new annotations, altered supervision threshold or new outbound message was used.
 
-The fix is an acquisition/evaluator review candidate; stable v0.2.0 is unchanged pending review. Hash-exact storage preserves the chosen source labels, not their independent correctness or papyrological truth.
+Patrick reviewed PR #7; the fix is included in v0.3.0. All69 combined release tests pass; historical v0.2.0 assets remain unchanged. Hash-exact storage preserves the chosen source labels, not their independent correctness or papyrological truth.

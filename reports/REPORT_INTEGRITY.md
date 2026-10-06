@@ -25,9 +25,9 @@ A small but complete one-segment manifest now returns an explicit inconclusive i
 
 ## Verification and limits
 
--52 local tests and lint pass. Regressions use the actual public records and exercise missing/duplicate/unknown cells, changed source/placement/seed/model/runtime fields, nonfinite or inconsistent metrics, storage ratios and lossless controls.
+- 52 local tests and lint pass. Regressions use the actual public records and exercise missing/duplicate/unknown cells, changed source/placement/seed/model/runtime fields, nonfinite or inconsistent metrics, storage ratios and lossless controls.
 - Valid full-table report regeneration matches the original numerical summary byte-for-byte. The q2 gate remains rejected and four q8 material-failure segments remain identified.
 - The two damaged console cases fail with actionable messages and produce no new report artifacts.
 - GPU inference, source/model weights and statistical threshold/bootstrap rules are unchanged. Original benchmark, manifest and summary files remain immutable.
 
-These checks enforce consistency and protocol boundaries; they do not authenticate arbitrary self-consistent fabricated data or establish physical ink truth. Probability/source reproduction remains a separate control. The fix is a scientific-review candidate and is not yet in the stable v0.2.0 release.
+These checks enforce consistency and protocol boundaries; they do not authenticate arbitrary self-consistent fabricated data or establish physical ink truth. Probability/source reproduction remains a separate control. Patrick reviewed PR #6; the fix is included in v0.3.0. All69 combined release tests pass. Historical v0.2.0 assets remain unchanged.

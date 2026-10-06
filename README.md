@@ -6,11 +6,11 @@ A reproducible, task-aware compression benchmark for Vesuvius ink recovery. It r
 
 See [the full results](reports/RESULTS.md), [numerical table](reports/scores.csv), [preregistration](experiments/TEST_PROTOCOL.md), [research log](research/LOG.md), and [prior-art investigation](research/ECOSYSTEM_AND_OPPORTUNITIES.md).
 
-This review branch adds [copied-label cache integrity](reports/LABEL_CACHE_INTEGRITY.md): refresh previously skipped existing shards, allowing valid-but-changed labels or truncated copies to survive. Mismatches are now restored atomically from verified source bytes. Actual PHerc0139 data and interruption/retry tests validate the repair; no original scores or labels are changed.
+The reviewed [v0.3.0 release](https://github.com/pdmacinnes/vesuvius-ink-fidelity/releases/tag/v0.3.0) includes [copied-label cache integrity](reports/LABEL_CACHE_INTEGRITY.md): altered or truncated copies are restored atomically from verified source bytes. Actual PHerc0139 data and interruption/retry tests validate the repair; no original source labels or scores are changed.
 
-This review branch adds an [evidence boundary fix](reports/REPORT_INTEGRITY.md): the released reporter could accept a missing experiment hidden by a duplicate with a different run ID, or inconsistent stored deltas. The new guard rejects both before report writes. All128 published records validate, and the numerical summary regenerates byte-identically; no original measurement changes.
+The [report evidence guard](reports/REPORT_INTEGRITY.md) rejects missing/duplicate experiment cells and inconsistent stored deltas before writing reports. All128 published records validate, and the numerical summary regenerates byte-identically. All69 combined tests pass, including native codec checks.
 
-The reviewed release is [v0.2.0](https://github.com/pdmacinnes/vesuvius-ink-fidelity/releases/tag/v0.2.0). A fresh native Windows environment reproduced all24 short-command verification records exactly. The release also contains [exploratory mechanism probes](reports/MECHANISMS.md): both padding candidates failed selection, and raw-reference normalization did not repair the largest losses. Patrick reviewed these diagnostics in PR #3. They retain their experimental status and do not change the original/lossless recommendation.
+A fresh native Windows environment reproduced all24 short-command verification records exactly. The [exploratory mechanism probes](reports/MECHANISMS.md) reject both padding candidates; raw-reference normalization does not repair the largest losses. These reviewed diagnostics retain their experimental status and the original/lossless recommendation remains unchanged.
 
 ![Paired ink fidelity and storage results](reports/ink-fidelity.png)
 
@@ -92,7 +92,7 @@ scores = ink_metrics(labels, probabilities, supervision_mask, threshold=0.5)
 
 The release wheel contains the Python code. Commands still require the repository's manifests/reference reports and separately acquired upstream sources, native codec and models. Use the Windows setup from a checkout for the supported end-to-end path; the wheel alone is not a bundled dataset/model application.
 
-This research branch adds a CPU-only [actual mirror preflight](reports/MIRROR_PREFLIGHT.md), pending review. All98 registered native-CT chunks and both rendered input hashes match the existing local q8 baseline. `mirror-probe` checks three chunks; `mirror-probe --expand` covers the two prior development crops. This is bounded representation parity, not a general mirror-fidelity guarantee or new ink inference. Remote transport dependencies are available through `.[remote]` and the existing full Windows setup.
+The reviewed CPU-only [actual mirror preflight](reports/MIRROR_PREFLIGHT.md) verifies all98 registered native-CT chunks and both rendered input hashes against the local q8 baseline. `mirror-probe` checks three chunks; `mirror-probe --expand` covers the two prior development crops. This is bounded representation parity, not a general mirror-fidelity guarantee or new ink inference. Remote dependencies are available through `.[remote]` and the full Windows setup.
 
 ## Tests
 
