@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased copied-label repair
+
+- Verify copied label metadata/shards against their acquired source and atomically restore mismatched or partial targets instead of trusting existence.
+- Matching copies are reused; interrupted repair preserves the prior target and permits retry. Actual Vesuvius-data replay restores identical decoded labels.
+- Acquisition/evaluator changes await review; no source labels, model scores or v0.2.0 assets changed.
+
 ## Unreleased report integrity fix
 
 - Reject missing/duplicate experiment cells and inconsistent stored deltas before report writes; validate declared source/model/metric/control contracts.

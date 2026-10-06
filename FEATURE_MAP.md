@@ -3,6 +3,7 @@
 | Feature | Implementation | Evidence/status |
 |---|---|---|
 | Public bounded acquisition | `acquisition.Fetcher`, `RemoteV2Array` | Real CT/surface/label chunks acquired; checksums, byte budget, transient retry, truncation and shape checks. Raw v2 volume path rejects unsupported filters/dtypes. |
+| Copied label integrity | `mirror_label_array`, `_copy_verified_object` | Review candidate: corrupt/changed local copies repaired atomically from checked source; actual-data replay and interrupted-copy/source-failure/healthy-reuse tests pass. |
 | Standard Zarr input | `acquisition.open_array`, label mirror | Local arrays and OME groups v2/v3 tested. Explicit levels required; actual v3 labels and v2 CT/surface used. |
 | Upstream codec reuse | `compression.Codec` | Native Windows DLL built from pinned upstream; real q=0 and Zstd round trips exact. No new codec. |
 | Official ink model adapter | `inference.InkModel` | Both released seeds run on RTX5070Ti; restricted checkpoint loading, strict state match, FP32/TF32-off and captured float output. |
