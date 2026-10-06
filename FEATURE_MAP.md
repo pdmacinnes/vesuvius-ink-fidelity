@@ -16,4 +16,4 @@
 | Cold reproduction | CLI `reproduce` | Two separate source caches; 24 model arms each; exact input/output/score equality on failures from two different scrolls. Direct FP32 convolution and OS peak-RAM evidence captured. |
 | First Letters assessment | `research/LOG.md` | No new discovery; current data are known-text controls. |
 
-Current project status: implementation/evidence complete and locally verified. Human review, public release, external adoption and actual prize submission remain pending.
+Current project status: reviewed and merged in PR #1; v0.1.0 publicly released October 6, 2026. External adoption and actual prize submission remain pending. The short reproduction entrypoint is being verified from a clean public installation.

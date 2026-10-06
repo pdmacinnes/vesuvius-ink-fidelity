@@ -82,3 +82,13 @@ Research selection and spec are ready for review. No implementation, ML benchmar
 - Next: finalize the evaluation-tool review candidate, commit the verified implementation, and prepare a draft PR. Publication/real community feedback and prize submission remain subsequent actions; no adoption or award is asserted.
 - Release check caught Git's automatic JSON line-ending normalization changing the frozen manifest's byte hash. `.gitattributes` now preserves JSON bytes, and staged-blob hashes are checked against measured input manifests before release. This is a packaging correction; no ROI, model, input array or score is changed.
 - Resume identity now includes Torch/NumPy/Zarr/CUDA versions and the inference contract; frozen metadata/labels are checksum-enforced by default, and shape changes/renamed physical groups/overlapping scored areas are rejected. Older development cache entries may rerun under this stricter identity. Numerical evidence remains unchanged.
+
+## 2026-10-06 - Public release and fresh setup
+
+- Patrick approved and authorized merging PR #1; merged as9443eba and local main fast-forwarded cleanly. Auto-merge remains OFF.
+- Patrick authorized the next stage and pre-approved its spec. Published the reviewed repository and v0.1.0 at16:37UTC. No original CT/labels/meshes/weights or new textual images are included.
+- Patrick granted full GPU access for the next90 minutes; the measured work window began16:38UTC and ends approximately18:08UTC (12:08pm America/Denver).
+- A genuinely fresh public checkout, new Python environment, source clones, compiler build and model downloads completed successfully on native Windows. The log-display command used the script's changed working directory and failed to locate its own log; the setup itself completed and CUDA/weights/DLL were independently verified.
+- Reproduced a public-entrypoint defect in the fresh checkout: `reproduce` defaulted to unpublished local `artifacts/test/results.json`. The baseline algorithm and supplied numerical evidence are valid, but newcomers could not use the shortest command without a full benchmark first.
+- Routine patch: reproduction defaults now use the public `reports/benchmark-records.json` and `reports/source-receipts.json`. Explicit local overrides remain supported. Added a regression check that all default reference inputs are shipped files. No scientific parameter or existing reference score changes.
+- No external/community messages have been sent. Preparing a reproduction invitation does not establish adoption.

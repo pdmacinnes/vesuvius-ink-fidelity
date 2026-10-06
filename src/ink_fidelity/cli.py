@@ -7,7 +7,7 @@ from pathlib import Path
 LOGGER = logging.getLogger(__name__)
 
 
-def main(argv=None):
+def parse_args(argv=None):
     parser = argparse.ArgumentParser(description="Vesuvius ink fidelity experiments")
     sub = parser.add_subparsers(dest="command", required=True)
     run = sub.add_parser("pilot")
@@ -31,16 +31,20 @@ def main(argv=None):
     summary.add_argument("--manifest", type=Path, default=Path("experiments/frozen-test.json"))
     summary.add_argument("--out", type=Path, default=Path("reports"))
     repeat = sub.add_parser("reproduce")
-    repeat.add_argument("--results", type=Path, default=Path("artifacts/test/results.json"))
+    repeat.add_argument("--results", type=Path, default=Path("reports/benchmark-records.json"))
     repeat.add_argument("--manifest", type=Path, default=Path("experiments/frozen-test.json"))
-    repeat.add_argument("--receipts", type=Path, default=Path("artifacts/test/acquisition.json"))
+    repeat.add_argument("--receipts", type=Path, default=Path("reports/source-receipts.json"))
     repeat.add_argument("--cache", type=Path, default=Path(".cache/cold-reproduction"))
     repeat.add_argument("--out", type=Path, default=Path("artifacts/reproduction"))
     quality = sub.add_parser("quality")
     quality.add_argument("--results", type=Path, default=Path("artifacts/test/results.json"))
     quality.add_argument("--artifacts", type=Path, default=Path("artifacts/test"))
     quality.add_argument("--out", type=Path, default=Path("reports/model-input-quality.json"))
-    args = parser.parse_args(argv)
+    return parser.parse_args(argv)
+
+
+def main(argv=None):
+    args = parse_args(argv)
     logging.basicConfig(level=logging.WARNING)
     try:
         if args.command == "freeze":
