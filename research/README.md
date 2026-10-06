@@ -2,6 +2,7 @@
 
 - [Ecosystem and opportunity report](ECOSYSTEM_AND_OPPORTUNITIES.md): 12 ranked problems, prior art, subjective estimates, project selection and First Letters assessment.
 - [Research log](LOG.md): hypotheses, corrections, negative preflight results and decisions.
+- [Evidence boundary audit](../reports/REPORT_INTEGRITY.md): reproduced report-input failures, stronger consistency checks and unchanged published conclusions.
 - [Mechanism follow-up](../reports/MECHANISMS.md): rejected padding policies and mixed normalization counterfactuals, clearly exploratory.
 - [First Letters readiness](FIRST_LETTERS_READINESS.md): current eligible-target assessment and prior-art exclusions.
 - [Implementation specification](../specs/vesuvius-ink-fidelity.md): approval-gated engineering and experiment plan.
