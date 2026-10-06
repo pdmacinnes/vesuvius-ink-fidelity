@@ -1,0 +1,20 @@
+{
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "gpu": "NVIDIA GeForce RTX 5070 Ti",
+  "driver": "581.57",
+  "tests": {
+    "package": 22,
+    "upstream_flat_inference": 19,
+    "upstream_numerical_geometry": 14
+  },
+  "lint": "passed",
+  "cold_reproduction": true,
+  "precision_reproduction": true,
+  "torch": "2.11.0+cu128",
+  "zarr": "3.1.3",
+  "numpy": "2.2.6",
+  "native_codec": "volcomp 1.3.0, LLVM-mingw20260922",
+  "os_peak_rss_bytes_bounded_reproduction": 2092941312,
+  "scope": "Local validation only; CI, human review and external adoption not claimed"
+}

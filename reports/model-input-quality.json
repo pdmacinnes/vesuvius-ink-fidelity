@@ -1,0 +1,514 @@
+[
+  {
+    "arm": "raw",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 0.0,
+    "psnr": null,
+    "ssim_mean": 1.0,
+    "window": "PHerc0139-20250831000000-w040_2025083102-0"
+  },
+  {
+    "arm": "zstd",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 0.0,
+    "psnr": null,
+    "ssim_mean": 1.0,
+    "window": "PHerc0139-20250831000000-w040_2025083102-0"
+  },
+  {
+    "arm": "q2",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 1.8545101881027222,
+    "psnr": 40.460791903306884,
+    "ssim_mean": 0.9801615590172932,
+    "window": "PHerc0139-20250831000000-w040_2025083102-0"
+  },
+  {
+    "arm": "q8",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 4.124344825744629,
+    "psnr": 33.51970300013815,
+    "ssim_mean": 0.9169661034341114,
+    "window": "PHerc0139-20250831000000-w040_2025083102-0"
+  },
+  {
+    "arm": "raw",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 0.0,
+    "psnr": null,
+    "ssim_mean": 1.0,
+    "window": "PHerc0139-20250831000000-w040_2025083102-1"
+  },
+  {
+    "arm": "zstd",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 0.0,
+    "psnr": null,
+    "ssim_mean": 1.0,
+    "window": "PHerc0139-20250831000000-w040_2025083102-1"
+  },
+  {
+    "arm": "q2",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 1.7367347478866577,
+    "psnr": 41.061473533758374,
+    "ssim_mean": 0.9827754748943747,
+    "window": "PHerc0139-20250831000000-w040_2025083102-1"
+  },
+  {
+    "arm": "q8",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 3.8856842517852783,
+    "psnr": 34.118290672415284,
+    "ssim_mean": 0.9237005874552092,
+    "window": "PHerc0139-20250831000000-w040_2025083102-1"
+  },
+  {
+    "arm": "raw",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 0.0,
+    "psnr": null,
+    "ssim_mean": 1.0,
+    "window": "PHerc0139-20260115000000-w044_2026011522-0"
+  },
+  {
+    "arm": "zstd",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 0.0,
+    "psnr": null,
+    "ssim_mean": 1.0,
+    "window": "PHerc0139-20260115000000-w044_2026011522-0"
+  },
+  {
+    "arm": "q2",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 1.7399455308914185,
+    "psnr": 41.00412933533467,
+    "ssim_mean": 0.9831238980958394,
+    "window": "PHerc0139-20260115000000-w044_2026011522-0"
+  },
+  {
+    "arm": "q8",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 3.9313292503356934,
+    "psnr": 33.93947392618907,
+    "ssim_mean": 0.9260224060980952,
+    "window": "PHerc0139-20260115000000-w044_2026011522-0"
+  },
+  {
+    "arm": "raw",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 0.0,
+    "psnr": null,
+    "ssim_mean": 1.0,
+    "window": "PHerc0139-20260115000000-w044_2026011522-1"
+  },
+  {
+    "arm": "zstd",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 0.0,
+    "psnr": null,
+    "ssim_mean": 1.0,
+    "window": "PHerc0139-20260115000000-w044_2026011522-1"
+  },
+  {
+    "arm": "q2",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 1.857629656791687,
+    "psnr": 40.44589829945924,
+    "ssim_mean": 0.9815658642442083,
+    "window": "PHerc0139-20260115000000-w044_2026011522-1"
+  },
+  {
+    "arm": "q8",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 4.125772953033447,
+    "psnr": 33.51848102017869,
+    "ssim_mean": 0.9229643655022353,
+    "window": "PHerc0139-20260115000000-w044_2026011522-1"
+  },
+  {
+    "arm": "raw",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 0.0,
+    "psnr": null,
+    "ssim_mean": 1.0,
+    "window": "PHercParis4-20231016151002-0"
+  },
+  {
+    "arm": "zstd",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 0.0,
+    "psnr": null,
+    "ssim_mean": 1.0,
+    "window": "PHercParis4-20231016151002-0"
+  },
+  {
+    "arm": "q2",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 3.3312623500823975,
+    "psnr": 35.19870190451577,
+    "ssim_mean": 0.944967669082703,
+    "window": "PHercParis4-20231016151002-0"
+  },
+  {
+    "arm": "q8",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 6.786576271057129,
+    "psnr": 28.75614438071148,
+    "ssim_mean": 0.8227074222646922,
+    "window": "PHercParis4-20231016151002-0"
+  },
+  {
+    "arm": "q2-before-pool",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 1.6253201961517334,
+    "psnr": 41.52124513386678,
+    "ssim_mean": 0.9843282595706123,
+    "window": "PHercParis4-20231016151002-0"
+  },
+  {
+    "arm": "q8-before-pool",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 3.95819091796875,
+    "psnr": 33.48876063364963,
+    "ssim_mean": 0.9317699759878839,
+    "window": "PHercParis4-20231016151002-0"
+  },
+  {
+    "arm": "raw",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 0.0,
+    "psnr": null,
+    "ssim_mean": 1.0,
+    "window": "PHercParis4-20231016151002-1"
+  },
+  {
+    "arm": "zstd",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 0.0,
+    "psnr": null,
+    "ssim_mean": 1.0,
+    "window": "PHercParis4-20231016151002-1"
+  },
+  {
+    "arm": "q2",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 3.2670931816101074,
+    "psnr": 35.344343716796615,
+    "ssim_mean": 0.9487807900715319,
+    "window": "PHercParis4-20231016151002-1"
+  },
+  {
+    "arm": "q8",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 6.74315071105957,
+    "psnr": 28.829296727741944,
+    "ssim_mean": 0.8308733506421788,
+    "window": "PHercParis4-20231016151002-1"
+  },
+  {
+    "arm": "q2-before-pool",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 1.6054927110671997,
+    "psnr": 41.62671735090751,
+    "ssim_mean": 0.9850074820663804,
+    "window": "PHercParis4-20231016151002-1"
+  },
+  {
+    "arm": "q8-before-pool",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 3.8482701778411865,
+    "psnr": 33.73393518226304,
+    "ssim_mean": 0.9376876089303322,
+    "window": "PHercParis4-20231016151002-1"
+  },
+  {
+    "arm": "raw",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 0.0,
+    "psnr": null,
+    "ssim_mean": 1.0,
+    "window": "PHercParis4-20230702185753-0"
+  },
+  {
+    "arm": "zstd",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 0.0,
+    "psnr": null,
+    "ssim_mean": 1.0,
+    "window": "PHercParis4-20230702185753-0"
+  },
+  {
+    "arm": "q2",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 3.437382221221924,
+    "psnr": 35.00156747861672,
+    "ssim_mean": 0.944412778365415,
+    "window": "PHercParis4-20230702185753-0"
+  },
+  {
+    "arm": "q8",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 7.073029041290283,
+    "psnr": 28.461336264612,
+    "ssim_mean": 0.8123740220498276,
+    "window": "PHercParis4-20230702185753-0"
+  },
+  {
+    "arm": "q2-before-pool",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 1.654326319694519,
+    "psnr": 41.410328854565265,
+    "ssim_mean": 0.98459131797729,
+    "window": "PHercParis4-20230702185753-0"
+  },
+  {
+    "arm": "q8-before-pool",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 4.1780219078063965,
+    "psnr": 33.131231468463184,
+    "ssim_mean": 0.9261893484366762,
+    "window": "PHercParis4-20230702185753-0"
+  },
+  {
+    "arm": "raw",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 0.0,
+    "psnr": null,
+    "ssim_mean": 1.0,
+    "window": "PHercParis4-20230702185753-1"
+  },
+  {
+    "arm": "zstd",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 0.0,
+    "psnr": null,
+    "ssim_mean": 1.0,
+    "window": "PHercParis4-20230702185753-1"
+  },
+  {
+    "arm": "q2",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 3.530780792236328,
+    "psnr": 34.88097230764682,
+    "ssim_mean": 0.948772054549867,
+    "window": "PHercParis4-20230702185753-1"
+  },
+  {
+    "arm": "q8",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 7.372410297393799,
+    "psnr": 28.316491973989258,
+    "ssim_mean": 0.8159463271436246,
+    "window": "PHercParis4-20230702185753-1"
+  },
+  {
+    "arm": "q2-before-pool",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 1.6918781995773315,
+    "psnr": 41.285260755670386,
+    "ssim_mean": 0.9864260963348879,
+    "window": "PHercParis4-20230702185753-1"
+  },
+  {
+    "arm": "q8-before-pool",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 4.280758857727051,
+    "psnr": 33.08259958288799,
+    "ssim_mean": 0.9310131495434268,
+    "window": "PHercParis4-20230702185753-1"
+  },
+  {
+    "arm": "raw",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 0.0,
+    "psnr": null,
+    "ssim_mean": 1.0,
+    "window": "PHerc0841-20260220213127-w00-0"
+  },
+  {
+    "arm": "zstd",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 0.0,
+    "psnr": null,
+    "ssim_mean": 1.0,
+    "window": "PHerc0841-20260220213127-w00-0"
+  },
+  {
+    "arm": "q2",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 3.6005442142486572,
+    "psnr": 34.60864378666004,
+    "ssim_mean": 0.9560223076784873,
+    "window": "PHerc0841-20260220213127-w00-0"
+  },
+  {
+    "arm": "q8",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 7.7590250968933105,
+    "psnr": 27.76603841816457,
+    "ssim_mean": 0.8335854349380182,
+    "window": "PHerc0841-20260220213127-w00-0"
+  },
+  {
+    "arm": "q2-before-pool",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 1.6881917715072632,
+    "psnr": 41.248025427956215,
+    "ssim_mean": 0.9886812020814536,
+    "window": "PHerc0841-20260220213127-w00-0"
+  },
+  {
+    "arm": "q8-before-pool",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 4.4449872970581055,
+    "psnr": 32.639976218597184,
+    "ssim_mean": 0.9398782072593967,
+    "window": "PHerc0841-20260220213127-w00-0"
+  },
+  {
+    "arm": "raw",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 0.0,
+    "psnr": null,
+    "ssim_mean": 1.0,
+    "window": "PHerc0841-20260220213127-w00-1"
+  },
+  {
+    "arm": "zstd",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 0.0,
+    "psnr": null,
+    "ssim_mean": 1.0,
+    "window": "PHerc0841-20260220213127-w00-1"
+  },
+  {
+    "arm": "q2",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 3.457418441772461,
+    "psnr": 34.86777932221412,
+    "ssim_mean": 0.9508924663745337,
+    "window": "PHerc0841-20260220213127-w00-1"
+  },
+  {
+    "arm": "q8",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 7.241001605987549,
+    "psnr": 28.19602790475482,
+    "ssim_mean": 0.8254860684868885,
+    "window": "PHerc0841-20260220213127-w00-1"
+  },
+  {
+    "arm": "q2-before-pool",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 1.653191089630127,
+    "psnr": 41.40416614561048,
+    "ssim_mean": 0.9864555409961533,
+    "window": "PHerc0841-20260220213127-w00-1"
+  },
+  {
+    "arm": "q8-before-pool",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 4.19999885559082,
+    "psnr": 33.031230387350085,
+    "ssim_mean": 0.933717999477362,
+    "window": "PHerc0841-20260220213127-w00-1"
+  },
+  {
+    "arm": "raw",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 0.0,
+    "psnr": null,
+    "ssim_mean": 1.0,
+    "window": "PHerc0841-20260220214732-auto_grown_20260220144552896-0"
+  },
+  {
+    "arm": "zstd",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 0.0,
+    "psnr": null,
+    "ssim_mean": 1.0,
+    "window": "PHerc0841-20260220214732-auto_grown_20260220144552896-0"
+  },
+  {
+    "arm": "q2",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 3.7776947021484375,
+    "psnr": 34.180065732961324,
+    "ssim_mean": 0.9600818283994365,
+    "window": "PHerc0841-20260220214732-auto_grown_20260220144552896-0"
+  },
+  {
+    "arm": "q8",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 8.388742446899414,
+    "psnr": 27.014387254374384,
+    "ssim_mean": 0.8357743783447282,
+    "window": "PHerc0841-20260220214732-auto_grown_20260220144552896-0"
+  },
+  {
+    "arm": "q2-before-pool",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 1.7333325147628784,
+    "psnr": 41.0674452347711,
+    "ssim_mean": 0.9901560772290793,
+    "window": "PHerc0841-20260220214732-auto_grown_20260220144552896-0"
+  },
+  {
+    "arm": "q8-before-pool",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 4.786159038543701,
+    "psnr": 32.01189899904268,
+    "ssim_mean": 0.940625698568946,
+    "window": "PHerc0841-20260220214732-auto_grown_20260220144552896-0"
+  },
+  {
+    "arm": "raw",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 0.0,
+    "psnr": null,
+    "ssim_mean": 1.0,
+    "window": "PHerc0841-20260220214732-auto_grown_20260220144552896-1"
+  },
+  {
+    "arm": "zstd",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 0.0,
+    "psnr": null,
+    "ssim_mean": 1.0,
+    "window": "PHerc0841-20260220214732-auto_grown_20260220144552896-1"
+  },
+  {
+    "arm": "q2",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 3.5226354598999023,
+    "psnr": 34.64489398668402,
+    "ssim_mean": 0.9512226230303457,
+    "window": "PHerc0841-20260220214732-auto_grown_20260220144552896-1"
+  },
+  {
+    "arm": "q8",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 7.636664867401123,
+    "psnr": 27.646167925332172,
+    "ssim_mean": 0.8279802655116327,
+    "window": "PHerc0841-20260220214732-auto_grown_20260220144552896-1"
+  },
+  {
+    "arm": "q2-before-pool",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 1.6452217102050781,
+    "psnr": 41.40207998426809,
+    "ssim_mean": 0.9868429530066007,
+    "window": "PHerc0841-20260220214732-auto_grown_20260220144552896-1"
+  },
+  {
+    "arm": "q8-before-pool",
+    "comparison": "Same final 17-plane model input, including inference halo",
+    "mae": 4.2862467765808105,
+    "psnr": 32.71575065443804,
+    "ssim_mean": 0.9383338877450813,
+    "window": "PHerc0841-20260220214732-auto_grown_20260220144552896-1"
+  }
+]
