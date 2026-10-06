@@ -19,3 +19,5 @@ Our public-source README snapshot is retained locally under Git-ignored `researc
 3. Only then perform a bounded private target screen, retaining raw/lossless controls, both seeds and directional checks. Apparent strokes require data support and independent technical/papyrological review; selection of brighter predictions cannot substitute for this.
 
 For now, the higher-value next action is an independent reproduction and a real user's workflow integration of the released fidelity evaluator. No new tracer, model training run or target screen was launched merely to consume the authorized GPU window.
+
+The later CPU-only deployed-mirror check passes on98 native9 PHerc0139 control chunks and two historical rendered inputs. This verifies a bounded acquisition/representation path, not transfer to an eligible unread scroll. No new eligible target or qualifying discovery follows from that parity result.

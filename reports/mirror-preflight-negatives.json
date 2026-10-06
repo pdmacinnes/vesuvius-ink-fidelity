@@ -1,0 +1,62 @@
+[
+  {
+    "announced_http_body_bytes": 0,
+    "error": "ValueError: HTTP probe requires an explicit response length",
+    "gpu_inference_launched": false,
+    "http_requests": [],
+    "index_location": "end",
+    "mirror_url": "https://dl.ash2txt.org/community-uploads/forrest/volcomp/PHerc0139/volumes/20250728140407-9.362um-1.2m-113keV-masked.zarr/0",
+    "original_url": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0139/volumes/20250728140407-9.362um-1.2m-113keV-masked.zarr/0",
+    "pass": false,
+    "records": [],
+    "renders": [],
+    "role": "bounded-format-parity-development",
+    "source_receipts": [
+      {
+        "bytes": 239,
+        "sha256": "562679cffc09a94b7342a38c37e49f433a4dfa6e3c93b7599dbeaec791186a35",
+        "url": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0139/volumes/20250728140407-9.362um-1.2m-113keV-masked.zarr/0/.zarray"
+      },
+      {
+        "bytes": 1050,
+        "sha256": "f387585248b169110e2a845440f36f5ef75f746e04631036397ed151308d35fb",
+        "url": "https://dl.ash2txt.org/community-uploads/forrest/volcomp/PHerc0139/volumes/20250728140407-9.362um-1.2m-113keV-masked.zarr/0/zarr.json"
+      }
+    ]
+  },
+  {
+    "announced_http_body_bytes": 1050,
+    "error": "ValueError: Mirror source shape/dtype/frame contract mismatch",
+    "gpu_inference_launched": false,
+    "http_requests": [
+      {
+        "body_bytes": 1050,
+        "range": null,
+        "status": 200
+      }
+    ],
+    "index_location": "end",
+    "manifest_sha256": "31c3c24056a4ab84c473e69c824a707a845ad80a5f139ae097ff3475e8af3b18",
+    "mirror_url": "https://dl.ash2txt.org/community-uploads/forrest/volcomp/PHerc0139/volumes/20250728140407-9.362um-1.2m-113keV-masked.zarr/0",
+    "original_source_bytes_received": 1289,
+    "original_url": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0139/volumes/20250728140407-9.362um-1.2m-113keV-masked.zarr/0",
+    "pass": false,
+    "receipts_sha256": "b5cd87fbaf47af4a54989c0ce14c543960fc44fd9d64c3ff36860cf9d4f7415f",
+    "records": [],
+    "reference_sha256": "aa9108a6a393d53d8e382561d9dad66575ee324b444994ebc1311de68860fb52",
+    "renders": [],
+    "role": "bounded-format-parity-development",
+    "source_receipts": [
+      {
+        "bytes": 239,
+        "sha256": "562679cffc09a94b7342a38c37e49f433a4dfa6e3c93b7599dbeaec791186a35",
+        "url": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0139/volumes/20250728140407-9.362um-1.2m-113keV-masked.zarr/0/.zarray"
+      },
+      {
+        "bytes": 1050,
+        "sha256": "f387585248b169110e2a845440f36f5ef75f746e04631036397ed151308d35fb",
+        "url": "https://dl.ash2txt.org/community-uploads/forrest/volcomp/PHerc0139/volumes/20250728140407-9.362um-1.2m-113keV-masked.zarr/0/zarr.json"
+      }
+    ]
+  }
+]

@@ -125,12 +125,22 @@ class RemoteV2Array:
         return output
 
 
-def open_array(path: str | Path, *, level: str | None = None) -> zarr.Array:
+def open_array(
+    path: str | Path,
+    *,
+    level: str | None = None,
+    storage_options: dict | None = None,
+    zarr_format: int | None = None,
+) -> zarr.Array:
     if str(path).startswith("https://"):
-        store = zarr.storage.FsspecStore.from_url(str(path), read_only=True)
-        node = zarr.open(store, mode="r")
+        store = zarr.storage.FsspecStore.from_url(
+            str(path), read_only=True, storage_options=storage_options or {}
+        )
+        node = zarr.open(store, mode="r", zarr_format=zarr_format)
     else:
-        node = zarr.open(str(path), mode="r")
+        if storage_options is not None:
+            raise ValueError("Storage options apply only to remote HTTPS arrays")
+        node = zarr.open(str(path), mode="r", zarr_format=zarr_format)
     if isinstance(node, zarr.Group):
         if level is None:
             raise ValueError("A Zarr group requires an explicit pyramid level")

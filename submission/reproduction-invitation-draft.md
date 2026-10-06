@@ -1,6 +1,6 @@
 # Reproduction invitation - unsent draft
 
-Status: prepared October 6, 2026. No message has been sent. Intended audience: interested Villa/volcomp users or maintainers, after Patrick authorizes posting.
+Status: this broader invitation remains unsent. A focused request was posted with Patrick's authorization as [compressor issue #1](https://github.com/SuperOptimizer/volume-compressor/issues/1). Any additional destination/message needs separate authorization.
 
 We released [Vesuvius Ink Fidelity](https://github.com/pdmacinnes/vesuvius-ink-fidelity/releases/tag/v0.1.1), a small MIT evaluator that reuses volcomp and the released ink_9um models to measure paired ink-label sensitivity through pooling/rendering and inference.
 

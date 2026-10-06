@@ -1,6 +1,6 @@
 # Upstream reproduction request - unsent
 
-Proposed destination: a new issue in `SuperOptimizer/volume-compressor`. No existing issues/discussions cover this specific evidence as of October6,2026. Patrick must authorize posting this exact request before it is sent.
+Posted with Patrick's explicit authorization as [upstream issue #1](https://github.com/SuperOptimizer/volume-compressor/issues/1), October6,2026. The request below is retained verbatim. No follow-up message has been sent; no independent reproduction or adoption is established.
 
 Proposed title: **Ink-model sensitivity: reproducible pooled-input cases and task evaluation**
 
