@@ -92,3 +92,30 @@ Research selection and spec are ready for review. No implementation, ML benchmar
 - Reproduced a public-entrypoint defect in the fresh checkout: `reproduce` defaulted to unpublished local `artifacts/test/results.json`. The baseline algorithm and supplied numerical evidence are valid, but newcomers could not use the shortest command without a full benchmark first.
 - Routine patch: reproduction defaults now use the public `reports/benchmark-records.json` and `reports/source-receipts.json`. Explicit local overrides remain supported. Added a regression check that all default reference inputs are shipped files. No scientific parameter or existing reference score changes.
 - No external/community messages have been sent. Preparing a reproduction invitation does not establish adoption.
+
+## 2026-10-06 - Fresh release verification completed
+
+- Fresh public Windows setup and the short reproduction command match all24 decoded/probability/metric records exactly. PR #2 repaired the defaults to use shipped reference files;24 package tests and Windows/Linux CI passed. Manually merged the authorized routine release repair as20d343d; published v0.1.1. Auto-merge remains OFF. Anonymous public release access verified.
+- Added public numerical reproduction receipts and prepared an unsent reproduction invitation. A second environment on our own PC is not independent community adoption.
+
+## 2026-10-06 - Boundary mechanism hypothesis rejected
+
+- Under Patrick's next-stage spec pre-approval, wrote the padding protocol before scoring. Source inspection identifies existing independent16³ transforms and zero-padded128³ chunks; Zarr's out-of-bounds fill convention is credited, not presented as our discovery.
+- H5: the partial transform block in21-plane pooled inputs drives the largest ink failures. Selected the worst published q8 region per Paris4/0841 as explicitly post-test development; evaluated both released seeds, raw/ordinary q8, edge/reflect continuation, raw-tail restoration and tail-only damage.24 records complete.
+- Exact q=0/Zstd controls pass for every policy; real voxels remain unchanged before encoding. The first16 decoded planes match across policies. Actual experimental stores read identically with the standard volcomp/Zarr decoder; continuation explicitly differs from the recommended fill-value convention.
+- Edge mean AP gain versus zero +0.01383166, worst change -0.01084155; reflect mean +0.01607807, worst -0.03343045. Both fail the prewritten0.01 adverse-case rule. No candidate selected, no fresh-region confirmation run, no threshold relaxed.
+- Raw-tail restoration repairs much of Paris4 seed43 AP loss but not0841 seed42. For0841 seed43 it raises AP to0.7252 while F1 at0.5 collapses from0.3878 to0.0050. A boundary-only explanation and an AP-only repair criterion are inadequate. Model response involves interacting perturbations; no stronger physical-causal claim is warranted.
+
+## 2026-10-06 - Normalization counterfactual remains mixed
+
+- H6: recomputed robust patch calibration mediates major q8 damage. Wrote the second protocol after H5 failed and before its inference. Reused the same two exploratory regions, both seeds, official raw normalizer and fixed occupancy;16 records complete. The anchor requires raw reference, so this is diagnostic rather than deployable compression.
+- Frozen-raw control predictions are byte-identical to the official raw path. Reference-normalized q8 AP changes versus ordinary q8 are +0.0004/+0.0087 on Paris4 and +0.0031/+0.0265 on0841. The two largest failures remain largely unrepaired;0841 seed42 F1 worsens slightly. No universal normalization repair is supported.
+- Guarded final commands were rerun against the default public reproduction inputs. Raw/q8 control hashes are explicitly enforced, all outcomes retained, per-plane/parameter receipts and supervised probability drift included. Final scores match the first24+16 records exactly.
+-34 package tests and lint pass locally; native codec integration executes here. Experimental code/results will be a scientific-review draft PR, without merge or new stable release. Original frozen benchmark files remain unchanged.
+
+## 2026-10-06 - First Letters reassessment and next decision
+
+- Read the recent bnleft/first-light-pherc0211 README, pinned to728a27234f50d239c6c83934dad6952b48b94b76. Its authors already test winding sense, second seed, slab profile diagnostics and64-layer tile recentering; their verdict is no convincing ink. These are attributed results, not our reproduction. Another generic centering screen would duplicate their work.
+- Rechecked eligible volumes and prize conditions. Existing measured controls are not eligible First Letters targets. PHerc1203 native9 CT exists, but the saved catalog does not expose ready segment properties; a useful screen first needs a verified, source-identified surface on a distinct region.
+- No eligible target inference, candidate text publication, speculative tracing/training or outbound message was launched simply to fill GPU time. Next useful step is independent reproduction and feedback on the released evaluator, then a concrete integration into a user's actual workflow. See FIRST_LETTERS_READINESS.md and the unsent invitation.
+- Follow-up code committed asdf28dc5 and opened as draft PR #3. Windows/Linux PR checks pass. An additional saved-file comparison verifies all24 padding probability hashes against their first run; all16 normalization hashes and frozen-raw drift0 are also verified. All our GPU jobs finished before the authorized deadline. Scientific changes remain unmerged for Patrick's review; stable v0.1.1 is public.

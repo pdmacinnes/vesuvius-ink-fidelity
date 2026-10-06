@@ -1,0 +1,46 @@
+{
+  "cells": [
+    [
+      "PHercParis4-20230702185753-0",
+      42
+    ],
+    [
+      "PHercParis4-20230702185753-0",
+      43
+    ],
+    [
+      "PHerc0841-20260220214732-auto_grown_20260220144552896-0",
+      42
+    ],
+    [
+      "PHerc0841-20260220214732-auto_grown_20260220144552896-0",
+      43
+    ]
+  ],
+  "fresh_confirmation": "not run: both candidates failed the prewritten rule",
+  "padding_selection": {
+    "edge": {
+      "mean_ap_vs_zero": 0.01383166073891584,
+      "minimum_ap_vs_zero": -0.01084154533816939,
+      "rule": "mean > 0 and minimum >= -0.01",
+      "selected": false
+    },
+    "reflect": {
+      "mean_ap_vs_zero": 0.01607807475032233,
+      "minimum_ap_vs_zero": -0.03343044793803618,
+      "rule": "mean > 0 and minimum >= -0.01",
+      "selected": false
+    }
+  },
+  "public_raw_source_contract": "experiments/frozen-test.json and reports/source-receipts.json",
+  "published_manifest_sha256": "3dade149313ea255ff56eb086f6c3656f1b7e31599aee619749fafb27a35da1e",
+  "record_sha256": {
+    "normalization": "0cab96dcb3a2b37521bc9660646402f28e66f827ca5703a106c500c37609d1ed",
+    "padding": "98d1a2d9a6771a65d0a2afba1d899d5410828b00828224b2ca46542528d20ac0"
+  },
+  "repeat": {
+    "normalization_records_exact": 16,
+    "padding_records_exact": 24
+  },
+  "role": "post-test-exploratory-development"
+}

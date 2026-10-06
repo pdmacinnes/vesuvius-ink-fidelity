@@ -40,6 +40,22 @@ def parse_args(argv=None):
     quality.add_argument("--results", type=Path, default=Path("artifacts/test/results.json"))
     quality.add_argument("--artifacts", type=Path, default=Path("artifacts/test"))
     quality.add_argument("--out", type=Path, default=Path("reports/model-input-quality.json"))
+    padding = sub.add_parser("padding-study")
+    padding.add_argument("--results", type=Path, default=Path("reports/benchmark-records.json"))
+    padding.add_argument("--manifest", type=Path, default=Path("experiments/frozen-test.json"))
+    padding.add_argument("--artifacts", type=Path, default=Path("artifacts/reproduction"))
+    padding.add_argument("--out", type=Path, default=Path("artifacts/padding-development"))
+    normalization = sub.add_parser("normalization-study")
+    normalization.add_argument(
+        "--results", type=Path, default=Path("reports/benchmark-records.json")
+    )
+    normalization.add_argument(
+        "--manifest", type=Path, default=Path("experiments/frozen-test.json")
+    )
+    normalization.add_argument("--artifacts", type=Path, default=Path("artifacts/reproduction"))
+    normalization.add_argument(
+        "--out", type=Path, default=Path("artifacts/normalization-development")
+    )
     return parser.parse_args(argv)
 
 
@@ -47,7 +63,15 @@ def main(argv=None):
     args = parse_args(argv)
     logging.basicConfig(level=logging.WARNING)
     try:
-        if args.command == "freeze":
+        if args.command == "normalization-study":
+            from .normalization_study import normalization_study
+
+            normalization_study(args.results, args.manifest, args.artifacts, args.out)
+        elif args.command == "padding-study":
+            from .padding_study import padding_study
+
+            padding_study(args.results, args.manifest, args.artifacts, args.out)
+        elif args.command == "freeze":
             from .selection import freeze_manifest
 
             freeze_manifest(args.catalog, args.out)
