@@ -1,6 +1,6 @@
 # October 2026 Progress Prize draft
 
-Status: evidence and code ready for review; publication, community use and actual submission remain pending. This document does not submit anything.
+Status: reviewed, merged and publicly released as v0.1.0 on October 6, 2026. Community use and actual submission remain pending. This document does not submit anything.
 
 ## Contribution
 
@@ -33,4 +33,4 @@ Some evaluated surfaces appear in the released model's training set. The masks i
 
 New code is MIT. Fetch manifests and numerical records are release-ready; original CT, labels, meshes, weights and candidate textual images are excluded. No new textual revelation is published. No external adoption or organizer endorsement has been established, and no community messages have been sent.
 
-Before submitting: complete Patrick's evaluation-harness review, publish the reviewed repository, obtain genuine usage/feedback where possible, verify the current October form/rules, and link the final public release and reproduction commands. A modest Progress Prize is the realistic target; the evidence does not justify a $20,000 expectation.
+Before submitting: obtain genuine usage/feedback where possible, verify the current October form/rules, and link the final public release and reproduction commands. A modest Progress Prize is the realistic target; the evidence does not justify a $20,000 expectation.

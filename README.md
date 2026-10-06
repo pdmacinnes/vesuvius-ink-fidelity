@@ -34,6 +34,14 @@ GPU dependencies are substantial, particularly the roughly2.8 GB PyTorch wheel. 
 
 The supplied frozen manifest already names exact test windows. Recreating it is optional and requires a fresh catalog; do not regenerate it after seeing scores and describe the result as preregistered.
 
+The shortest GPU reproduction starts directly from the published reference records. It does not require running the full 128-record benchmark first:
+
+```powershell
+.venv\Scripts\ink-fidelity.exe reproduce
+```
+
+This acquires a bounded source subset in a separate cache and verifies the strongest failures on two different scrolls against the included results and source hashes. It is a reproduction of reported cases, not new held-out validation.
+
 ```powershell
 # CT-only raw rendering parity, fetching the matching public mesh
 .venv\Scripts\ink-fidelity.exe pilot --render-only
