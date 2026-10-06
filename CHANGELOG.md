@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased report integrity fix
+
+- Reject missing/duplicate experiment cells and inconsistent stored deltas before report writes; validate declared source/model/metric/control contracts.
+- All128 published records remain valid and the numerical summary is unchanged. Retain the existing lossless prediction tolerance and scientific decision rules.
+- Complete small-group evidence reports an inconclusive interval instead of comparing a missing bound. The fix awaits scientific review.
+
 ## 0.2.0 - October 6, 2026
 
 - Exploratory boundary-padding and source-reference normalization diagnostics, reusing the official model and decoder with unchanged baseline settings.

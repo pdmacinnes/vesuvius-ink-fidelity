@@ -6,6 +6,8 @@ A reproducible, task-aware compression benchmark for Vesuvius ink recovery. It r
 
 See [the full results](reports/RESULTS.md), [numerical table](reports/scores.csv), [preregistration](experiments/TEST_PROTOCOL.md), [research log](research/LOG.md), and [prior-art investigation](research/ECOSYSTEM_AND_OPPORTUNITIES.md).
 
+This review branch adds an [evidence boundary fix](reports/REPORT_INTEGRITY.md): the released reporter could accept a missing experiment hidden by a duplicate with a different run ID, or inconsistent stored deltas. The new guard rejects both before report writes. All128 published records validate, and the numerical summary regenerates byte-identically; no original measurement changes.
+
 The reviewed release is [v0.2.0](https://github.com/pdmacinnes/vesuvius-ink-fidelity/releases/tag/v0.2.0). A fresh native Windows environment reproduced all24 short-command verification records exactly. The release also contains [exploratory mechanism probes](reports/MECHANISMS.md): both padding candidates failed selection, and raw-reference normalization did not repair the largest losses. Patrick reviewed these diagnostics in PR #3. They retain their experimental status and do not change the original/lossless recommendation.
 
 ![Paired ink fidelity and storage results](reports/ink-fidelity.png)
