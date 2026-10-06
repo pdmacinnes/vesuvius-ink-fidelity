@@ -1,0 +1,203 @@
+{
+  "arms_reproduced": 24,
+  "comparisons": [
+    {
+      "arm": "raw",
+      "decoded_hash_equal": true,
+      "metric_max_abs": 0.0,
+      "probability_file_hash_equal": true,
+      "seed": 42,
+      "window": "PHercParis4-20230702185753-0"
+    },
+    {
+      "arm": "raw",
+      "decoded_hash_equal": true,
+      "metric_max_abs": 0.0,
+      "probability_file_hash_equal": true,
+      "seed": 43,
+      "window": "PHercParis4-20230702185753-0"
+    },
+    {
+      "arm": "zstd",
+      "decoded_hash_equal": true,
+      "metric_max_abs": 0.0,
+      "probability_file_hash_equal": true,
+      "seed": 42,
+      "window": "PHercParis4-20230702185753-0"
+    },
+    {
+      "arm": "zstd",
+      "decoded_hash_equal": true,
+      "metric_max_abs": 0.0,
+      "probability_file_hash_equal": true,
+      "seed": 43,
+      "window": "PHercParis4-20230702185753-0"
+    },
+    {
+      "arm": "q2",
+      "decoded_hash_equal": true,
+      "metric_max_abs": 0.0,
+      "probability_file_hash_equal": true,
+      "seed": 42,
+      "window": "PHercParis4-20230702185753-0"
+    },
+    {
+      "arm": "q2",
+      "decoded_hash_equal": true,
+      "metric_max_abs": 0.0,
+      "probability_file_hash_equal": true,
+      "seed": 43,
+      "window": "PHercParis4-20230702185753-0"
+    },
+    {
+      "arm": "q8",
+      "decoded_hash_equal": true,
+      "metric_max_abs": 0.0,
+      "probability_file_hash_equal": true,
+      "seed": 42,
+      "window": "PHercParis4-20230702185753-0"
+    },
+    {
+      "arm": "q8",
+      "decoded_hash_equal": true,
+      "metric_max_abs": 0.0,
+      "probability_file_hash_equal": true,
+      "seed": 43,
+      "window": "PHercParis4-20230702185753-0"
+    },
+    {
+      "arm": "q2-before-pool",
+      "decoded_hash_equal": true,
+      "metric_max_abs": 0.0,
+      "probability_file_hash_equal": true,
+      "seed": 42,
+      "window": "PHercParis4-20230702185753-0"
+    },
+    {
+      "arm": "q2-before-pool",
+      "decoded_hash_equal": true,
+      "metric_max_abs": 0.0,
+      "probability_file_hash_equal": true,
+      "seed": 43,
+      "window": "PHercParis4-20230702185753-0"
+    },
+    {
+      "arm": "q8-before-pool",
+      "decoded_hash_equal": true,
+      "metric_max_abs": 0.0,
+      "probability_file_hash_equal": true,
+      "seed": 42,
+      "window": "PHercParis4-20230702185753-0"
+    },
+    {
+      "arm": "q8-before-pool",
+      "decoded_hash_equal": true,
+      "metric_max_abs": 0.0,
+      "probability_file_hash_equal": true,
+      "seed": 43,
+      "window": "PHercParis4-20230702185753-0"
+    },
+    {
+      "arm": "raw",
+      "decoded_hash_equal": true,
+      "metric_max_abs": 0.0,
+      "probability_file_hash_equal": true,
+      "seed": 42,
+      "window": "PHerc0841-20260220214732-auto_grown_20260220144552896-0"
+    },
+    {
+      "arm": "raw",
+      "decoded_hash_equal": true,
+      "metric_max_abs": 0.0,
+      "probability_file_hash_equal": true,
+      "seed": 43,
+      "window": "PHerc0841-20260220214732-auto_grown_20260220144552896-0"
+    },
+    {
+      "arm": "zstd",
+      "decoded_hash_equal": true,
+      "metric_max_abs": 0.0,
+      "probability_file_hash_equal": true,
+      "seed": 42,
+      "window": "PHerc0841-20260220214732-auto_grown_20260220144552896-0"
+    },
+    {
+      "arm": "zstd",
+      "decoded_hash_equal": true,
+      "metric_max_abs": 0.0,
+      "probability_file_hash_equal": true,
+      "seed": 43,
+      "window": "PHerc0841-20260220214732-auto_grown_20260220144552896-0"
+    },
+    {
+      "arm": "q2",
+      "decoded_hash_equal": true,
+      "metric_max_abs": 0.0,
+      "probability_file_hash_equal": true,
+      "seed": 42,
+      "window": "PHerc0841-20260220214732-auto_grown_20260220144552896-0"
+    },
+    {
+      "arm": "q2",
+      "decoded_hash_equal": true,
+      "metric_max_abs": 0.0,
+      "probability_file_hash_equal": true,
+      "seed": 43,
+      "window": "PHerc0841-20260220214732-auto_grown_20260220144552896-0"
+    },
+    {
+      "arm": "q8",
+      "decoded_hash_equal": true,
+      "metric_max_abs": 0.0,
+      "probability_file_hash_equal": true,
+      "seed": 42,
+      "window": "PHerc0841-20260220214732-auto_grown_20260220144552896-0"
+    },
+    {
+      "arm": "q8",
+      "decoded_hash_equal": true,
+      "metric_max_abs": 0.0,
+      "probability_file_hash_equal": true,
+      "seed": 43,
+      "window": "PHerc0841-20260220214732-auto_grown_20260220144552896-0"
+    },
+    {
+      "arm": "q2-before-pool",
+      "decoded_hash_equal": true,
+      "metric_max_abs": 0.0,
+      "probability_file_hash_equal": true,
+      "seed": 42,
+      "window": "PHerc0841-20260220214732-auto_grown_20260220144552896-0"
+    },
+    {
+      "arm": "q2-before-pool",
+      "decoded_hash_equal": true,
+      "metric_max_abs": 0.0,
+      "probability_file_hash_equal": true,
+      "seed": 43,
+      "window": "PHerc0841-20260220214732-auto_grown_20260220144552896-0"
+    },
+    {
+      "arm": "q8-before-pool",
+      "decoded_hash_equal": true,
+      "metric_max_abs": 0.0,
+      "probability_file_hash_equal": true,
+      "seed": 42,
+      "window": "PHerc0841-20260220214732-auto_grown_20260220144552896-0"
+    },
+    {
+      "arm": "q8-before-pool",
+      "decoded_hash_equal": true,
+      "metric_max_abs": 0.0,
+      "probability_file_hash_equal": true,
+      "seed": 43,
+      "window": "PHerc0841-20260220214732-auto_grown_20260220144552896-0"
+    }
+  ],
+  "distinct_scrolls": [
+    "PHerc0841",
+    "PHercParis4"
+  ],
+  "pass": true,
+  "post_test_reproduction_not_new_validation": true
+}

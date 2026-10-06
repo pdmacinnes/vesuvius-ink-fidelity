@@ -1,0 +1,24 @@
+{
+  "role": "development",
+  "physical_segment": "PHerc0139-w035",
+  "sample_id": "PHerc0139",
+  "scan_id": "20250720065842",
+  "volume_id": "20250728140407",
+  "segment_id": "20260317000000-w035_2026031718",
+  "pitch_um": 9.362,
+  "canvas_shape": [5820, 5240],
+  "surface_url": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0139/segments/20260317000000-w035_2026031718/surface-volumes/9.362um-1.2m-113keV-volume-20250728140407.zarr/0",
+  "ct_url": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0139/volumes/20250728140407-9.362um-1.2m-113keV-masked.zarr/0",
+  "label_url": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0139/segments/20260317000000-w035_2026031718/ink-labels/9.362um-volume-20250728140407/20260918",
+  "mesh": "data/pilot-mesh",
+  "mesh_url": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0139/segments/20260317000000-w035_2026031718/mesh/20260317000000-on-20250728140407-9.362um.tifxyz",
+  "direction": "forward",
+  "threshold": 0.5,
+  "halo": 128,
+  "windows": [
+    {"id": "w035-dev-a", "y": 2048, "x": 2304, "size": 512},
+    {"id": "w035-dev-b", "y": 1024, "x": 1792, "size": 512}
+  ],
+  "selection": "Top two supervised 512-square windows on a fixed grid, chosen using label/supervision coverage only; no model output inspected.",
+  "training_exposure": "Physical segment appears in the released training corpus; paired input sensitivity only, not model generalization."
+}

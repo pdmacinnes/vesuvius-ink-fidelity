@@ -1,6 +1,7 @@
 *.py text eol=lf
 *.ps1 text eol=lf
 *.md text eol=lf
-*.json text eol=lf
+# Frozen manifests and receipts have byte-level hashes across platforms.
+*.json -text whitespace=cr-at-eol
 *.toml text eol=lf
 *.yml text eol=lf
