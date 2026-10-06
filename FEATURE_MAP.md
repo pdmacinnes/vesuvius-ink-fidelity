@@ -14,6 +14,9 @@
 | Verified resume | `benchmark`, `validation` | Matching run identity/checksum required; corrupt/missing/changed artifacts and interrupted acquisitions tested. Source receipts enforced during cold reproduction. |
 | Export/report | CLI `report`, `quality` | JSON/CSV/PNG evidence complete; q2 operating gate rejected, q8 material-failure gate passed. No readability claims. |
 | Cold reproduction | CLI `reproduce` | Two separate source caches; 24 model arms each; exact input/output/score equality on failures from two different scrolls. Direct FP32 convolution and OS peak-RAM evidence captured. |
-| First Letters assessment | `research/LOG.md` | No new discovery; current data are known-text controls. |
+| Fresh public installation | Published v0.1.1; `reports/public-install-reproduction.json` | New Windows checkout/environment/compiler/models; documented short command reproduces all24 public records exactly. PR #2 fixed unpublished default input paths. This is local reproduction, not external adoption. |
+| Boundary mechanism probes | CLI `padding-study`, `padding_study`, `Codec.pad_chunk` | Exploratory40-record follow-up with normalization; both edge/reflect policies fail the prewritten adverse-case rule. Standard-reader compatibility and exact lossless controls checked. Experimental writer remains under scientific review. |
+| Raw-reference normalization | CLI `normalization-study`, `normalization_study` | Bit-identical official raw controls; diagnostic requires source input. Largest losses remain. Wrapper restoration after inference failure tested. |
+| First Letters assessment | `research/FIRST_LETTERS_READINESS.md` | No new discovery; PHerc0211 centering/second-seed work already exists. No target screen launched without a distinct, verified surface/problem. |
 
-Current project status: reviewed and merged in PR #1; v0.1.0 publicly released October 6, 2026. External adoption and actual prize submission remain pending. The short reproduction entrypoint is being verified from a clean public installation.
+Current project status: reviewed stable evaluator merged in PR #1; public reproduction repair merged in PR #2; v0.1.1 publicly released October6,2026. Follow-up experimental code/results are a separate scientific-review candidate. Auto-merge is OFF. External adoption and actual prize submission remain pending.

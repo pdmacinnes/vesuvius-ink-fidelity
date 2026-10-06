@@ -1,6 +1,6 @@
 # October 2026 Progress Prize draft
 
-Status: reviewed, merged and publicly released as v0.1.0 on October 6, 2026. Community use and actual submission remain pending. This document does not submit anything.
+Status: stable evaluator reviewed, merged and publicly released as [v0.1.1](https://github.com/pdmacinnes/vesuvius-ink-fidelity/releases/tag/v0.1.1) on October6,2026. Community use and actual submission remain pending. This document does not submit anything. The official October31,11:59pm Pacific deadline was rechecked October6 at [the prize page](https://scrollprize.org/prizes#progress-prizes).
 
 ## Contribution
 
@@ -17,6 +17,7 @@ The compressor already has CT-image, surface-teacher and probability-store measu
 - q8 model-input compression loses as much as 0.18777 masked ink average precision and produces material failures on four segments across two scrolls.
 - q2 produces 3.76-9.90x smaller actual stores but fails the preregistered task budget. Its positive overall mean is explicitly not used to certify the setting.
 - A separate empty-cache reproduction of the two strongest failures on different scrolls matches all 24 decoded input, prediction-file and score records exactly, with source hashes enforced.
+- A genuinely fresh public Windows checkout/environment/compiler/models also reproduces all24 records exactly using the documented short command. A missing-public-input default was fixed in v0.1.1 without changing scores or scientific parameters.
 - Before-versus-after depth pooling measurements demonstrate that the stage of compression matters. Those arms are clearly separated from the native9 raw-CT experiment and do not certify the full compressed mirror.
 
 ## Integration and reproducibility
@@ -34,3 +35,5 @@ Some evaluated surfaces appear in the released model's training set. The masks i
 New code is MIT. Fetch manifests and numerical records are release-ready; original CT, labels, meshes, weights and candidate textual images are excluded. No new textual revelation is published. No external adoption or organizer endorsement has been established, and no community messages have been sent.
 
 Before submitting: obtain genuine usage/feedback where possible, verify the current October form/rules, and link the final public release and reproduction commands. A modest Progress Prize is the realistic target; the evidence does not justify a $20,000 expectation.
+
+Separate follow-up research candidate: [40 exploratory mechanism records](../reports/MECHANISMS.md) reject both simple boundary-continuation repairs and show that raw-reference normalization barely repairs the two largest failures. One intervention improves AP while fixed-threshold F1 collapses. These new evaluator commands/results await scientific review; they are not required to reproduce the stable submission evidence and do not imply a safe compression policy.

@@ -20,12 +20,31 @@ class Codec:
         self.module = volcomp_zarr
         self.lossless = Blosc(cname="zstd", clevel=3, shuffle=Blosc.BITSHUFFLE)
 
-    def roundtrip(self, chunk: np.ndarray, *, kind: str, q=8, smooth=False):
-        if chunk.dtype != np.uint8 or chunk.ndim != 3 or any(s > 128 for s in chunk.shape):
+    def pad_chunk(self, chunk: np.ndarray, policy: str) -> np.ndarray:
+        if (
+            chunk.dtype != np.uint8
+            or chunk.ndim != 3
+            or any(not 1 <= s <= 128 for s in chunk.shape)
+        ):
             raise ValueError("Codec chunk requires uint8, 3 dimensions, each at most 128")
+        if policy not in ("zero", "edge", "reflect"):
+            raise ValueError(f"Unsupported encoder padding policy {policy}")
         padded = np.zeros((128, 128, 128), dtype=np.uint8)
+        if policy == "zero":
+            padded[tuple(slice(0, s) for s in chunk.shape)] = chunk
+        else:
+            # Only the last 16-voxel transform block needs continuation; filling
+            # the entire unused chunk would encode unnecessary synthetic data.
+            extent = tuple((s + 15) // 16 * 16 for s in chunk.shape)
+            extension = np.pad(
+                chunk, tuple((0, e - s) for s, e in zip(chunk.shape, extent)), mode=policy
+            )
+            padded[tuple(slice(0, e) for e in extent)] = extension
+        return padded
+
+    def roundtrip(self, chunk: np.ndarray, *, kind: str, q=8, smooth=False, padding="zero"):
+        padded = self.pad_chunk(chunk, padding)
         slices = tuple(slice(0, s) for s in chunk.shape)
-        padded[slices] = chunk
         raw = padded.tobytes()
         start = time.perf_counter()
         if kind == "zstd":
@@ -62,16 +81,19 @@ class Codec:
             "decode_seconds": decode_seconds,
             "mae": float(np.abs(delta).mean()),
             "psnr": float(10 * np.log10(255**2 / mse)) if mse else None,
+            "padding_policy": padding,
         }
 
-    def array_roundtrip(self, array: np.ndarray, *, kind: str, q=8, smooth=False):
+    def array_roundtrip(self, array: np.ndarray, *, kind: str, q=8, smooth=False, padding="zero"):
         if array.ndim != 3 or array.dtype != np.uint8:
             raise ValueError("Compression input must be a 3D uint8 array")
         output = np.empty_like(array)
         records = []
         for origin in itertools.product(*[range(0, s, 128) for s in array.shape]):
             slices = tuple(slice(o, min(o + 128, s)) for o, s in zip(origin, array.shape))
-            output[slices], record = self.roundtrip(array[slices], kind=kind, q=q, smooth=smooth)
+            output[slices], record = self.roundtrip(
+                array[slices], kind=kind, q=q, smooth=smooth, padding=padding
+            )
             records.append({"origin": list(origin), **record})
         delta = array.astype(np.float32) - output.astype(np.float32)
         mse = float(np.mean(delta * delta))
@@ -85,4 +107,5 @@ class Codec:
             "mae": float(np.abs(delta).mean()),
             "psnr": float(10 * np.log10(255**2 / mse)) if mse else None,
             "chunk_records": records,
+            "padding_policy": padding,
         }

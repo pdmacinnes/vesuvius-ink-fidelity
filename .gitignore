@@ -16,3 +16,4 @@ build/
 dist/
 .env
 .env.*
+/public-reproduction.log

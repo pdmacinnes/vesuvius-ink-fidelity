@@ -34,11 +34,11 @@ Status: pre-approved by Patrick on October 6, 2026: "feel free to start the next
 
 ## Acceptance Criteria
 
-- [ ] Repository is publicly accessible and v0.1.0 points to the reviewed merged commit.
-- [ ] Auto-merge remains OFF; publication contains only the approved source/numerical artifacts.
-- [ ] A fresh native Windows environment builds the pinned codec and loads both released models through the documented setup.
-- [ ] A public-reference reproduction command works without first producing the full private/local benchmark directory.
-- [ ] Frozen manifest hashes and selected reproduced inputs/probabilities/metrics match the published evidence, or any discrepancy is explicitly corrected and revalidated.
-- [ ] Relevant tests, lint, setup syntax and CI pass for any patch; changes follow branch/PR conventions.
-- [ ] Release notes, feature map and research log accurately distinguish reviewed release, local reproduction and actual external adoption.
-- [ ] Outreach and submission drafts are concrete and unsent; no First Letters finding or prize outcome is claimed.
+- [x] Repository is publicly accessible and v0.1.0 points to the reviewed merged commit.
+- [x] Auto-merge remains OFF; publication contains only the approved source/numerical artifacts.
+- [x] A fresh native Windows environment builds the pinned codec and loads both released models through the documented setup.
+- [x] A public-reference reproduction command works without first producing the full private/local benchmark directory.
+- [x] Frozen manifest hashes and selected reproduced inputs/probabilities/metrics match the published evidence, or any discrepancy is explicitly corrected and revalidated.
+- [x] Relevant tests, lint, setup syntax and CI pass for any patch; changes follow branch/PR conventions.
+- [x] Release notes, feature map and research log accurately distinguish reviewed release, local reproduction and actual external adoption.
+- [x] Outreach and submission drafts are concrete and unsent; no First Letters finding or prize outcome is claimed.
