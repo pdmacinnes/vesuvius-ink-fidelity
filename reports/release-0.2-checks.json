@@ -1,0 +1,20 @@
+{
+  "diagnostic_module_imports_without_gpu": "pass",
+  "gpu_inference_launched": false,
+  "isolated_wheel_install_import_cli": "pass",
+  "lint": "pass",
+  "local_tests_passed": 34,
+  "raw_assets_in_wheel": false,
+  "reviewed_base_commit": "e25472a",
+  "unchanged_primary_hashes": {
+    "experiments/frozen-test.json": "3dade149313ea255ff56eb086f6c3656f1b7e31599aee619749fafb27a35da1e",
+    "reports/benchmark-records.json": "75644ea9dbb71c0d26067f3dcd62043672cc504552e2128c4b192cf2b5c61561",
+    "reports/source-receipts.json": "782f922a97eb7432d297708c1ea4dc282ed310749612390450d876250eaf188e",
+    "reports/summary.json": "f9fef473a46c1cc385b8c63a1adbb0b0a0873d841bded1c50f820934a56123c6"
+  },
+  "version": "0.2.0",
+  "wheel": "vesuvius_ink_fidelity-0.2.0-py3-none-any.whl",
+  "wheel_bytes": 36764,
+  "wheel_file_count": 25,
+  "wheel_sha256": "43a549b6d3f0b3105ec3b52599b3132080b377b35106ff06270e56206c537d7d"
+}

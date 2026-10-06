@@ -1,10 +1,10 @@
 # Changelog
 
-## Unreleased research candidate
+## 0.2.0 - October 6, 2026
 
 - Exploratory boundary-padding and source-reference normalization diagnostics, reusing the official model and decoder with unchanged baseline settings.
 - Both padding candidates fail the prewritten adverse-case rule; no new compression policy is promoted. AP and fixed-threshold F1 disagree severely in one counterfactual.
-- Numerical receipts, negative results, tests and public-install reproduction evidence; experimental evaluator changes await scientific review.
+- Numerical receipts, negative results, tests and public-install reproduction evidence; reviewed in PR #3. Diagnostic padding remains experimental and is not a recommended storage policy.
 
 ## 0.1.1
 
