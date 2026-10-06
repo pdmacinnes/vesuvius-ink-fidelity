@@ -7,28 +7,29 @@ from pathlib import Path
 
 import numpy as np
 
+from .experiment import MODEL_HASHES
 from .metrics import grouped_delta_interval
 from .provenance import file_hash, write_json
+from .upstream import VILLA_SHA
+from .validation import validate_report_rows
 
 
 def report(results_path: Path, manifest_path: Path, out: Path):
+    rows = json.loads(results_path.read_text(encoding="utf-8"))
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    validate_report_rows(
+        rows,
+        manifest,
+        manifest_sha256=file_hash(manifest_path),
+        model_hashes=MODEL_HASHES,
+        upstream_sha=VILLA_SHA,
+    )
     os.environ.setdefault("MPLCONFIGDIR", str(Path(".cache/matplotlib").resolve()))
     import matplotlib
 
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
 
-    rows = json.loads(results_path.read_text(encoding="utf-8"))
-    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    expected = sum(
-        len(s["windows"]) * (6 if s["depth_pool"] == 4 else 4) * 2 for s in manifest["records"]
-    )
-    if len(rows) != expected or len({r["run_id"] for r in rows}) != expected:
-        raise ValueError(
-            f"Incomplete or duplicate benchmark: {len(rows)} records, expected {expected}"
-        )
-    if any(r["manifest_sha256"] != file_hash(manifest_path) for r in rows):
-        raise ValueError("Result manifest hash mismatch")
     out.mkdir(parents=True, exist_ok=True)
     summaries = {}
     for arm in sorted({r["arm"] for r in rows}):
@@ -49,7 +50,8 @@ def report(results_path: Path, manifest_path: Path, out: Path):
         summaries[arm] = stats
     candidate = summaries["q2"]
     candidate["operating_gate_pass"] = (
-        candidate["lower95_one_sided"] >= -0.005
+        candidate["lower95_one_sided"] is not None
+        and candidate["lower95_one_sided"] >= -0.005
         and candidate["min_store_ratio"] >= 2
         and candidate["min_segment_mean_delta_ap"] >= -0.02
         and candidate["min_window_seed_delta_f1"] >= -0.01

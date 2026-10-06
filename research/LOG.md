@@ -127,6 +127,15 @@ Research selection and spec are ready for review. No implementation, ML benchmar
 - Refreshed volcomp public main: still20b03983ee741baa160d3e630da77a3b3a24ee44; no open/closed issues or PRs returned in its own repository. Villa #1704 is OPEN and already warns that released models are sensitive to compressed data. Its review also covered trailing-shard indexes and accidental q=0-to-q=8 conversion; the author reports fixes. These are existing reports, not bugs newly discovered here.
 - A focused upstream request should offer the concrete pooled-input reproduction and paired task evaluator, while explicitly excluding a general codec defect or whole CT-mirror claim. No message has been sent.
 
+## 2026-10-06 - Report evidence boundary audit
+
+- Patrick authorized continued CPU work while away. PR #5 remains unmerged for review; no new GPU or additional outbound message is authorized. Used the debug skill's context/hypothesis/reproduction/root-fix process. The audit is isolated from the mirror branch and based on stable main152bb99.
+- H7: total count plus unique run IDs can hide a missing experiment. Actual public records with one Zstd cell replaced by a duplicate q8 under a new ID still produce a complete128-row report in the released reporter. H8: supplied delta fields are not paired to raw scores. Taking absolute q8 deltas while preserving AP metrics makes the reporter claim zero material-failure segments, despite four genuine failures. Both hypotheses confirmed through the old actual console entrypoint and API.
+- Added exact manifest-derived window/seed/arm/placement validation and source/model/inference/metric/control checks before any output writes. Paired AP/F1 and storage ratios must agree with their operands; coverage/confusion counts and thresholds must be consistent. Runtime/model inputs match raw anchors. Preserve the producer's1e-6 lossless prediction tolerance; zero-difference claims additionally require equal hashes/metrics. Arithmetic tolerance1e-12.
+- All128 original public records pass. Regenerated full numerical summary is byte-identical; q2 remains rejected and all four q8 failure segments remain. Actual corrected CLI rejects both damaged tables with exit1 and no new output directories. No original measurement or statistical threshold changes.
+- A complete one-segment software subset reports an inconclusive confidence interval rather than crashing on None. It is not new scientific validation.52 local tests and lint pass; regression coverage includes the real-data matrix and corrupted metadata. Public audit receipts contain hashes/outcomes only; damaged inputs remain private.
+- These are consistency checks, not authentication against deliberate coherent fabrication. New evaluator logic receives a separate scientific-review draft PR before release.
+
 ## 2026-10-06 - Copied label cache integrity
 
 - Continued Patrick's CPU-only reliability work after preparing report-boundary PR #6; its Windows/Linux checks pass. This separate branch is based on stable main, while PRs #5/#6 remain unmerged for review.

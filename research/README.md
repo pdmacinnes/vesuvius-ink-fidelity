@@ -4,6 +4,8 @@
 - [Research log](LOG.md): hypotheses, corrections, negative preflight results and decisions.
 - [Review handoff](REVIEW_HANDOFF.md): pending PRs, combined69-test verification and safe next release sequence.
 - [Copied label integrity](../reports/LABEL_CACHE_INTEGRITY.md): actual-data corruption/restart reproduction and atomic source-exact repair.
+
+- [Evidence boundary audit](../reports/REPORT_INTEGRITY.md): reproduced report-input failures, stronger consistency checks and unchanged published conclusions.
 - [Mechanism follow-up](../reports/MECHANISMS.md): rejected padding policies and mixed normalization counterfactuals, clearly exploratory.
 - [First Letters readiness](FIRST_LETTERS_READINESS.md): current eligible-target assessment and prior-art exclusions.
 - [Implementation specification](../specs/vesuvius-ink-fidelity.md): approval-gated engineering and experiment plan.
