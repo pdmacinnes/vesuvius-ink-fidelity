@@ -5,6 +5,7 @@
   "merged_local_tests_passed": 69,
   "original_summary_byte_identical": true,
   "outbound_messages_sent": 0,
+  "published_utc": "2026-10-06 21:28:30",
   "raw_assets_in_wheel": false,
   "reference_sha256": {
     "experiments/frozen-test.json": "3dade149313ea255ff56eb086f6c3656f1b7e31599aee619749fafb27a35da1e",
@@ -13,7 +14,11 @@
     "reports/source-receipts.json": "782f922a97eb7432d297708c1ea4dc282ed310749612390450d876250eaf188e",
     "reports/summary.json": "f9fef473a46c1cc385b8c63a1adbb0b0a0873d841bded1c50f820934a56123c6"
   },
+  "release_commit": "73cdc6a6c7d8c813e31403b5d4e2452154458fb2",
+  "release_url": "https://github.com/pdmacinnes/vesuvius-ink-fidelity/releases/tag/v0.3.0",
   "reviewed_merged_base": "185e0f1",
+  "uploaded_sha256_matches": true,
+  "uploaded_wheel_sha256": "2d87c4a31279a4e4ec74f57da7534ff44bce4f318e89f19047fa67d2595d89ab",
   "version": "0.3.0",
   "wheel": "vesuvius_ink_fidelity-0.3.0-py3-none-any.whl",
   "wheel_bytes": 42316,
