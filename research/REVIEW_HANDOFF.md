@@ -1,8 +1,8 @@
 # Review handoff - October 6, 2026
 
-Stable release: [v0.2.0](https://github.com/pdmacinnes/vesuvius-ink-fidelity/releases/tag/v0.2.0), commit152bb99. All original numerical evidence remains valid. The authorized [upstream request](https://github.com/SuperOptimizer/volume-compressor/issues/1) is posted; independent reproduction/adoption remains unestablished. No additional outward message or GPU work occurred during the latest CPU audits.
+Reviewed version: [v0.3.0](https://github.com/pdmacinnes/vesuvius-ink-fidelity/releases/tag/v0.3.0), incorporating all three approved PRs. Historical v0.2.0 remains immutable. All original numerical evidence remains valid. The authorized [upstream request](https://github.com/SuperOptimizer/volume-compressor/issues/1) is posted; independent reproduction/adoption remains unestablished. No additional outward message or GPU work occurred during the latest CPU audits.
 
-## Pending review, suggested order
+## Reviewed changes
 
 | PR | Purpose | Evidence |
 |---|---|---|
@@ -10,7 +10,7 @@ Stable release: [v0.2.0](https://github.com/pdmacinnes/vesuvius-ink-fidelity/rel
 | [#7](https://github.com/pdmacinnes/vesuvius-ink-fidelity/pull/7) | Repair copied label cache integrity | Actual PHerc0139 copied labels remain modified or truncated under old refresh. Atomic source-checked repair restores the exact decoded hash.39 local tests and Windows/Linux CI pass. |
 | [#5](https://github.com/pdmacinnes/vesuvius-ink-fidelity/pull/5) | Add actual mirror integration probe | All98 native9 chunks and both historical rendered inputs match the local q8 baseline. Separate-cache CPU proof;46 local tests and Windows/Linux CI pass. Bounded compatibility, not general fidelity or fresh model performance. |
 
-All three remain drafts, with auto-merge OFF. They are independently based on stable main. Shared documentation may need routine reconciliation when merging; do not discard one branch's research log or negative evidence while resolving it.
+Patrick reviewed all three PRs; #6, #7 and #5 are now manually merged. Documentation overlaps were reconciled, preserving every audit and negative result. Auto-merge remains OFF.
 
 ## Combined verification
 
@@ -18,7 +18,7 @@ The three code/test patches applied cleanly together in an isolated local scratc
 
 The first scratch run failed because its temporary-test parent did not exist; a second environment check hit Git ownership protections on junctioned upstream repositories. Created the missing parent and ran as the owning user without modifying global Git safety settings. These were test-environment failures, not product/data failures.
 
-No pending code has been merged into main or a new release. After human review, merge the two reliability fixes and the bounded mirror feature, reconcile documentation, rerun the combined checks on the merged tree, then prepare the next version. Keep original v0.2.0 assets and original benchmark data immutable.
+The combined merged tree passes all69 tests and lint, and its original report summary remains byte-identical. The v0.3.0 wheel passes isolated module/CLI/version checks; original v0.2.0 assets and benchmark data remain immutable.
 
 ## Research next step
 

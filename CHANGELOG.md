@@ -1,22 +1,12 @@
 # Changelog
 
-## Unreleased mirror preflight
+## 0.3.0 - October 6, 2026
 
-- CPU-only parity check against the actual public volcomp mirror, with original global chunk coordinates, source receipts, bounded standard HTTP reads and optional historical rendering parity.
-- Explicit remote format/transport options and optional dependencies; corrected metadata autodetection and list/tuple normalization failures are retained as negative diagnostics.
-- This is a review candidate; no expanded compression recommendation or fresh model performance claim.
-
-## Unreleased copied-label repair
-
-- Verify copied label metadata/shards against their acquired source and atomically restore mismatched or partial targets instead of trusting existence.
-- Matching copies are reused; interrupted repair preserves the prior target and permits retry. Actual Vesuvius-data replay restores identical decoded labels.
-- Acquisition/evaluator changes await review; no source labels, model scores or v0.2.0 assets changed.
-
-## Unreleased report integrity fix
-
-- Reject missing/duplicate experiment cells and inconsistent stored deltas before report writes; validate declared source/model/metric/control contracts.
-- All128 published records remain valid and the numerical summary is unchanged. Retain the existing lossless prediction tolerance and scientific decision rules.
-- Complete small-group evidence reports an inconclusive interval instead of comparing a missing bound. The fix awaits scientific review.
+- Validate the exact experiment matrix and paired score/storage/control arithmetic before report writes. All128 original records and the numerical summary remain unchanged.
+- Repair copied label metadata/shards atomically from verified source bytes; matching copies are reused and interrupted repair preserves the prior target.
+- Add the reviewed CPU-only actual-mirror probe:98 native9 chunks and two historical rendered inputs match the local q8 baseline. Coverage remains bounded to the tested development crops.
+- Explicit remote format/transport options, optional HTTP dependencies, source receipts and retained negative preflights.
+- Reviewed in PRs #5/#6/#7;69 combined local tests and Windows/Linux CI pass. Original/lossless input remains the recommendation.
 
 ## 0.2.0 - October 6, 2026
 

@@ -55,6 +55,6 @@ From a prepared source checkout with the pinned native codec and Villa sources:
 
 The short command reads three chunks. Expansion acquires roughly197MiB of original sources on a cold raw-data cache and about7MiB of announced mirror bodies. It does not load model weights or run GPU kernels. The setup script itself remains the full GPU-workflow setup; this command requires its codec/sources, HTTP dependencies and geometry libraries rather than a model run. Existing fsspec/aiohttp dependencies are now explicitly declared in the `remote` optional extra.
 
-Transport tests reject ignored ranges, wrong offsets/lengths, encoded range bodies, missing lengths and excess budgets, including propagation through the standard HTTP trace callback. Format/option forwarding and shipped default references are tested. The new command remains a review candidate until its draft PR is approved.
+Transport tests reject ignored ranges, wrong offsets/lengths, encoded range bodies, missing lengths and excess budgets, including propagation through the standard HTTP trace callback. Format/option forwarding and shipped default references are tested. Patrick reviewed PR #5; the command is included in v0.3.0. All69 combined release tests pass.
 
 Evidence: [full parity receipt](mirror-preflight.json), [source hashes](mirror-source-receipts.json), [historical CT records](ct-pilot-records.json), [research log](../research/LOG.md). Original benchmark records and v0.2.0 release remain unchanged.

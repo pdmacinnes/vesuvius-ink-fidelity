@@ -1,6 +1,6 @@
 # October 2026 Progress Prize draft
 
-Status: stable evaluator reviewed, merged and publicly released as [v0.1.1](https://github.com/pdmacinnes/vesuvius-ink-fidelity/releases/tag/v0.1.1) on October6,2026. Community use and actual submission remain pending. This document does not submit anything. The official October31,11:59pm Pacific deadline was rechecked October6 at [the prize page](https://scrollprize.org/prizes#progress-prizes).
+Status: stable evaluator reviewed, merged and publicly released as [v0.3.0](https://github.com/pdmacinnes/vesuvius-ink-fidelity/releases/tag/v0.3.0) on October6,2026. Community use and actual submission remain pending. This document does not submit anything. The official October31,11:59pm Pacific deadline was rechecked October6 at [the prize page](https://scrollprize.org/prizes#progress-prizes).
 
 ## Contribution
 
@@ -17,7 +17,7 @@ The compressor already has CT-image, surface-teacher and probability-store measu
 - q8 model-input compression loses as much as 0.18777 masked ink average precision and produces material failures on four segments across two scrolls.
 - q2 produces 3.76-9.90x smaller actual stores but fails the preregistered task budget. Its positive overall mean is explicitly not used to certify the setting.
 - A separate empty-cache reproduction of the two strongest failures on different scrolls matches all 24 decoded input, prediction-file and score records exactly, with source hashes enforced.
-- A genuinely fresh public Windows checkout/environment/compiler/models also reproduces all24 records exactly using the documented short command. A missing-public-input default was fixed in v0.1.1 without changing scores or scientific parameters.
+- A genuinely fresh public Windows checkout/environment/compiler/models also reproduces all24 records exactly using the documented short command. A missing-public-input default was fixed in v0.3.0 without changing scores or scientific parameters.
 - Before-versus-after depth pooling measurements demonstrate that the stage of compression matters. Those arms are clearly separated from the native9 raw-CT experiment and do not certify the full compressed mirror.
 
 ## Integration and reproducibility

@@ -159,3 +159,9 @@ Research selection and spec are ready for review. No implementation, ML benchmar
 - This becomes a separate acquisition/evaluator draft PR. Original numerical conclusions and v0.2.0 are unchanged pending human review.
 
 - PR #7 committed as26d7064; Windows/Linux CI pass. Combined code/test patches from #5 (6941960), #6 (38de617) and #7 applied cleanly in an isolated scratch checkout:69 distinct tests and lint pass, including native codec integration, and regenerated original summary remains byte-identical. No review branch was merged into main. Temporary-test parent/Git-owner setup failures were diagnosed and corrected without global safety changes. See REVIEW_HANDOFF.md and pending-integration-verification.json.
+
+## 2026-10-06 - Approved integration and v0.3.0 release preparation
+
+- Patrick reviewed all three PRs and said "they all look good". Manually merged #6 as1c43f9e, reconciled #7 with it and merged as6bc4f1a, then reconciled #5 and merged as185e0f1. Each reconciled head passed Windows/Linux CI; code merged cleanly, with documentation conflicts resolved by preserving all findings. Auto-merge remains OFF.
+- Fully merged tree passes69 local tests and lint, including native codec checks. The regenerated original report summary is byte-identical; original benchmark/manifest/receipts/native-CT records match v0.2.0 bytes. No new GPU, model scores, source labels or outward message.
+- Preparing v0.3.0: built42,316-byte code-only wheel, installed it separately and verified all new modules, command help and version from the installed copy rather than editable source. Wheel SHA-2562d87c4a31279a4e4ec74f57da7534ff44bce4f318e89f19047fa67d2595d89ab. Updated draft-status documentation without changing historical audit receipts or exploratory conclusions.

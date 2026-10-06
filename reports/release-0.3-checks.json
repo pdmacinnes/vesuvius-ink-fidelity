@@ -1,0 +1,21 @@
+{
+  "gpu_inference_launched": false,
+  "isolated_install_modules_cli_version": "pass",
+  "lint": "pass",
+  "merged_local_tests_passed": 69,
+  "original_summary_byte_identical": true,
+  "outbound_messages_sent": 0,
+  "raw_assets_in_wheel": false,
+  "reference_sha256": {
+    "experiments/frozen-test.json": "3dade149313ea255ff56eb086f6c3656f1b7e31599aee619749fafb27a35da1e",
+    "reports/benchmark-records.json": "75644ea9dbb71c0d26067f3dcd62043672cc504552e2128c4b192cf2b5c61561",
+    "reports/ct-pilot-records.json": "aa9108a6a393d53d8e382561d9dad66575ee324b444994ebc1311de68860fb52",
+    "reports/source-receipts.json": "782f922a97eb7432d297708c1ea4dc282ed310749612390450d876250eaf188e",
+    "reports/summary.json": "f9fef473a46c1cc385b8c63a1adbb0b0a0873d841bded1c50f820934a56123c6"
+  },
+  "reviewed_merged_base": "185e0f1",
+  "version": "0.3.0",
+  "wheel": "vesuvius_ink_fidelity-0.3.0-py3-none-any.whl",
+  "wheel_bytes": 42316,
+  "wheel_sha256": "2d87c4a31279a4e4ec74f57da7534ff44bce4f318e89f19047fa67d2595d89ab"
+}
