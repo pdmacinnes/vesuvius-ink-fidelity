@@ -4,6 +4,8 @@ import hashlib
 import itertools
 import json
 import os
+import shutil
+import tempfile
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -150,17 +152,40 @@ def open_array(
     return node
 
 
+def _copy_verified_object(source: Path, target: Path):
+    digest = file_hash(source)
+    if target.exists() and file_hash(target) == digest:
+        return
+    temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            dir=target.parent, prefix=target.name + ".", suffix=".partial", delete=False
+        ) as stream:
+            temporary = Path(stream.name)
+            with source.open("rb") as reader:
+                shutil.copyfileobj(reader, stream, length=1 << 20)
+            stream.flush()
+            os.fsync(stream.fileno())
+        if file_hash(temporary) != digest:
+            raise ValueError("Copied label object differs from the verified source")
+        temporary.replace(target)
+    finally:
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
+
+
 def mirror_label_array(url: str, fetcher: Fetcher) -> zarr.Array:
     # Released labels use one small compressed v3 shard. Downloading that shard
     # avoids relying on a remote reader's treatment of missing objects as zeros.
-    metadata = fetcher.json(url.rstrip("/") + "/zarr.json")
+    metadata_source = fetcher.get(url.rstrip("/") + "/zarr.json")
+    metadata = json.loads(metadata_source.read_text(encoding="utf-8"))
     if metadata.get("node_type") != "array":
         raise ValueError("Expected the explicit label-array level")
     shape = metadata["shape"]
     grid = metadata["chunk_grid"]["configuration"]["chunk_shape"]
     local = fetcher.cache / (hashlib.sha256(url.encode()).hexdigest() + ".zarr")
     local.mkdir(exist_ok=True)
-    (local / "zarr.json").write_text(json.dumps(metadata), encoding="utf-8")
+    _copy_verified_object(metadata_source, local / "zarr.json")
     encoding = metadata.get("chunk_key_encoding", {})
     if encoding.get("name") != "default":
         raise ValueError("Label mirror requires the default v3 chunk key encoding")
@@ -172,8 +197,7 @@ def mirror_label_array(url: str, fetcher: Fetcher) -> zarr.Array:
         source = fetcher.get(url.rstrip("/") + "/" + suffix)
         target = local / suffix
         target.parent.mkdir(parents=True, exist_ok=True)
-        if not target.exists():
-            target.write_bytes(source.read_bytes())
+        _copy_verified_object(source, target)
     return zarr.open(str(local), mode="r")
 
 

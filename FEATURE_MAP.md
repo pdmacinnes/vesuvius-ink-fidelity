@@ -3,6 +3,7 @@
 | Feature | Implementation | Evidence/status |
 |---|---|---|
 | Public bounded acquisition | `acquisition.Fetcher`, `RemoteV2Array` | Real CT/surface/label chunks acquired; checksums, byte budget, transient retry, truncation and shape checks. Raw v2 volume path rejects unsupported filters/dtypes. |
+| Copied label integrity | `mirror_label_array`, `_copy_verified_object` | Review candidate: corrupt/changed local copies repaired atomically from checked source; actual-data replay and interrupted-copy/source-failure/healthy-reuse tests pass. |
 | Standard Zarr input | `acquisition.open_array`, label mirror | Local arrays and OME groups v2/v3 tested. Explicit levels required; actual v3 labels and v2 CT/surface used. |
 | Upstream codec reuse | `compression.Codec` | Native Windows DLL built from pinned upstream; real q=0 and Zstd round trips exact. No new codec. |
 | Official ink model adapter | `inference.InkModel` | Both released seeds run on RTX5070Ti; restricted checkpoint loading, strict state match, FP32/TF32-off and captured float output. |
@@ -13,6 +14,7 @@
 | Honest metrics | `metrics` | Masked AP/ROC-AUC/F1; undefined one-class scores explicit; physical-segment grouped intervals. Unit tests pass. |
 | Verified resume | `benchmark`, `validation` | Matching run identity/checksum required; corrupt/missing/changed artifacts and interrupted acquisitions tested. Source receipts enforced during cold reproduction. |
 | Export/report | CLI `report`, `quality` | JSON/CSV/PNG evidence complete; q2 operating gate rejected, q8 material-failure gate passed. No readability claims. |
+| Report evidence boundary | `validation.validate_report_rows`, `report` | Review candidate: exact experiment matrix, source/model/paired arithmetic and control checks. Two reproduced malformed-table failures rejected; all128 public records validate and summary remains byte-identical. |
 | Cold reproduction | CLI `reproduce` | Two separate source caches; 24 model arms each; exact input/output/score equality on failures from two different scrolls. Direct FP32 convolution and OS peak-RAM evidence captured. |
 | Fresh public installation | Published v0.1.1; `reports/public-install-reproduction.json` | New Windows checkout/environment/compiler/models; documented short command reproduces all24 public records exactly. PR #2 fixed unpublished default input paths. This is local reproduction, not external adoption. |
 | Boundary mechanism probes | CLI `padding-study`, `padding_study`, `Codec.pad_chunk` | Reviewed exploratory40-record follow-up with normalization; both edge/reflect policies fail the prewritten adverse-case rule. Standard-reader compatibility and exact lossless controls checked. Experimental writer is not a recommended storage policy. |
@@ -21,4 +23,4 @@
 | Actual deployed mirror probe | CLI `mirror-probe`, `mirror_probe`, standard Zarr/Fsspec transport | CPU-only review candidate:98 actual native9 chunks equal local q8; both historical render hashes match. Separate original-data cache verified; range/budget guards and source receipts enforced. |
 | Community handoff | [Upstream issue #1](https://github.com/SuperOptimizer/volume-compressor/issues/1) | Patrick authorized one public reproduction request. Posted; no independent reproduction/adoption established. |
 
-Current project status: reviewed diagnostics merged in PR #3; release preparation merged in PR #4; v0.2.0 published October6,2026 at152bb99 with a verified code-only wheel. The actual-mirror probe is a separate scientific review candidate. Auto-merge is OFF. External adoption and actual prize submission remain pending.
+Current project status: Patrick reviewed PRs #5/#6/#7. Report integrity and label-cache fixes are merged; mirror integration is being reconciled for the next release. v0.2.0 remains immutable. Auto-merge is OFF; external adoption and prize submission remain pending.

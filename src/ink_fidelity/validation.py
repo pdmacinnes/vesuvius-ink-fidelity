@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import math
 import re
 
 
@@ -59,3 +60,149 @@ def verified_resume(record, *, run_id, probability_path, hash_file):
         and probability_path.exists()
         and record.get("probability_sha256") == hash_file(probability_path)
     )
+
+
+def validate_report_rows(rows, manifest, *, manifest_sha256, model_hashes, upstream_sha):
+    validate_test_manifest(manifest)
+    if not isinstance(rows, list):
+        raise ValueError("Report evidence must be a list of experiment records")
+    expected = {}
+    for segment in manifest["records"]:
+        arms = {name: "model-input" for name in ("raw", "zstd", "q2", "q8")}
+        if segment["depth_pool"] == 4:
+            arms.update(
+                {name: "before-depth-pool" for name in ("q2-before-pool", "q8-before-pool")}
+            )
+        for window in segment["windows"]:
+            for seed in (42, 43):
+                for arm, placement in arms.items():
+                    expected[window["id"], seed, arm] = (segment, window, placement)
+    if not expected:
+        raise ValueError("Frozen manifest defines no experiment cells")
+    actual, run_ids = {}, set()
+    for row in rows:
+        key = row["window"], row["seed"], row["arm"]
+        if key not in expected:
+            raise ValueError(f"Unexpected experiment cell {key}")
+        if key in actual:
+            raise ValueError(f"Duplicate experiment cell {key}")
+        actual[key] = row
+        if row["run_id"] in run_ids:
+            raise ValueError("Duplicate run identity")
+        run_ids.add(row["run_id"])
+        segment, window, placement = expected[key]
+        if row["manifest_sha256"] != manifest_sha256:
+            raise ValueError("Result manifest hash mismatch")
+        if (
+            row["physical_segment"] != segment["physical_segment"]
+            or row["sample"] != segment["sample_id"]
+            or row["placement"] != placement
+            or row["role"] != "frozen-test"
+        ):
+            raise ValueError(f"Experiment source/placement identity mismatch {key}")
+        for field in ("run_id", "raw_input_sha256", "decoded_sha256", "probability_sha256"):
+            if not isinstance(row[field], str) or not re.fullmatch(r"[0-9a-f]{64}", row[field]):
+                raise ValueError(f"Invalid {field} for {key}")
+        inference = row["inference"]
+        if (
+            inference["checkpoint_sha256"] != model_hashes[row["seed"]]
+            or inference["upstream_sha"] != upstream_sha
+            or inference["direction"] != segment["direction"]
+            or inference["precision"] != "float32, TF32 disabled"
+            or inference["stride"] != 64
+            or inference["blend"] != "hann"
+            or inference["layers"] != [None, None]
+            or inference.get("convolution_dtype_verified", "float32") != "float32"
+        ):
+            raise ValueError(f"Model/inference contract mismatch {key}")
+        metrics = row["metrics"]
+        if metrics.get("defined") is not True:
+            raise ValueError(f"Undefined scored evidence for {key}")
+        for name in ("average_precision", "roc_auc", "f1", "threshold"):
+            value = metrics[name]
+            if (
+                isinstance(value, bool)
+                or not isinstance(value, (int, float))
+                or not math.isfinite(value)
+                or not 0 <= value <= 1
+            ):
+                raise ValueError(f"Non-finite or invalid {name} for {key}")
+        if metrics["threshold"] != manifest["threshold"]:
+            raise ValueError(f"Scored threshold mismatch {key}")
+        for name in ("pixels", "positives", "negatives", "tp", "fp", "fn"):
+            if type(metrics[name]) is not int or metrics[name] < 0:
+                raise ValueError(f"Invalid confusion count {name} for {key}")
+        if (
+            metrics["positives"] <= 0
+            or metrics["negatives"] <= 0
+            or metrics["pixels"] != metrics["positives"] + metrics["negatives"]
+            or metrics["pixels"] > window["size"] ** 2
+            or metrics["tp"] + metrics["fn"] != metrics["positives"]
+            or metrics["fp"] > metrics["negatives"]
+        ):
+            raise ValueError(f"Scored denominator/confusion mismatch {key}")
+        if all(name in window for name in ("supervised", "positives", "negatives")) and (
+            metrics["pixels"] != window["supervised"]
+            or metrics["positives"] != window["positives"]
+            or metrics["negatives"] != window["negatives"]
+        ):
+            raise ValueError(f"Frozen supervision coverage mismatch {key}")
+        f1 = 2 * metrics["tp"] / (2 * metrics["tp"] + metrics["fp"] + metrics["fn"])
+        if not math.isclose(metrics["f1"], f1, rel_tol=0, abs_tol=1e-12):
+            raise ValueError(f"F1/confusion arithmetic mismatch {key}")
+        native, stored = row["native_zstd_bytes"], row["storage"]["store_bytes"]
+        if type(native) is not int or type(stored) is not int or native <= 0 or stored <= 0:
+            raise ValueError(f"Invalid storage byte count {key}")
+        if not math.isclose(
+            row["size_ratio_vs_native_zstd"], native / stored, rel_tol=0, abs_tol=1e-12
+        ):
+            raise ValueError(f"Storage ratio arithmetic mismatch {key}")
+        difference = row["max_abs_vs_raw"]
+        if (
+            isinstance(difference, bool)
+            or not isinstance(difference, (int, float))
+            or not math.isfinite(difference)
+            or not 0 <= difference <= 1
+        ):
+            raise ValueError(f"Invalid prediction difference {key}")
+    missing = expected.keys() - actual.keys()
+    if missing:
+        raise ValueError(f"Incomplete experiment matrix: missing {len(missing)} cells")
+    for key, row in actual.items():
+        window, seed, arm = key
+        raw = actual[window, seed, "raw"]
+        if (
+            row["raw_input_sha256"] != raw["raw_input_sha256"]
+            or row["native_zstd_bytes"] != raw["native_zstd_bytes"]
+            or any(
+                row["metrics"][name] != raw["metrics"][name]
+                for name in ("pixels", "positives", "negatives")
+            )
+            or row["inference"]["torch"] != raw["inference"]["torch"]
+            or row["inference"]["device"] != raw["inference"]["device"]
+            or row["decoded_sha256"] != actual[window, 42, arm]["decoded_sha256"]
+            or row["raw_input_sha256"] != actual[window, 42, "raw"]["raw_input_sha256"]
+        ):
+            raise ValueError(f"Paired input/support/runtime mismatch {key}")
+        for delta, metric in (("delta_ap", "average_precision"), ("delta_f1", "f1")):
+            value = row[delta]
+            expected_delta = row["metrics"][metric] - raw["metrics"][metric]
+            if (
+                isinstance(value, bool)
+                or not isinstance(value, (int, float))
+                or not math.isfinite(value)
+                or not math.isclose(value, expected_delta, rel_tol=0, abs_tol=1e-12)
+            ):
+                raise ValueError(f"Paired {delta} arithmetic mismatch {key}")
+        if arm in ("raw", "zstd") and (
+            row["decoded_sha256"] != raw["raw_input_sha256"]
+            or row["max_abs_vs_raw"] > 1e-6
+            or (
+                row["max_abs_vs_raw"] == 0
+                and (
+                    row["probability_sha256"] != raw["probability_sha256"]
+                    or row["metrics"] != raw["metrics"]
+                )
+            )
+        ):
+            raise ValueError(f"Raw/lossless control mismatch {key}")

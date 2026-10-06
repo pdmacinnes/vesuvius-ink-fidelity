@@ -1,0 +1,55 @@
+{
+  "actual_console_entrypoint_baseline_accepted": 2,
+  "actual_console_entrypoint_corrected_exit_codes": [
+    1,
+    1
+  ],
+  "arithmetic_absolute_tolerance": 1e-12,
+  "baseline": [
+    {
+      "accepted": true,
+      "failure_segments": [
+        "PHerc0841/20260220213127-w00",
+        "PHerc0841/20260220214732-auto_grown_20260220144552896",
+        "PHercParis4/20230702185753",
+        "PHercParis4/20231016151002"
+      ],
+      "material_failure_gate": true,
+      "mutation": "duplicate-with-missing-cell",
+      "records": 128
+    },
+    {
+      "accepted": true,
+      "failure_segments": [],
+      "material_failure_gate": false,
+      "mutation": "inconsistent-q8-deltas",
+      "records": 128
+    }
+  ],
+  "baseline_commit": "152bb99",
+  "baseline_release": "v0.2.0",
+  "corrected": [
+    {
+      "error": "Duplicate experiment cell ('PHerc0139-20250831000000-w040_2025083102-0', 42, 'q8')",
+      "mutation": "duplicate-with-missing-cell",
+      "output_directory_created": false,
+      "rejected": true
+    },
+    {
+      "error": "Paired delta_ap arithmetic mismatch ('PHerc0139-20250831000000-w040_2025083102-0', 42, 'q8')",
+      "mutation": "inconsistent-q8-deltas",
+      "output_directory_created": false,
+      "rejected": true
+    }
+  ],
+  "date": "2026-10-06",
+  "gpu_inference_launched": false,
+  "lossless_prediction_tolerance": 1e-06,
+  "manifest_sha256": "3dade149313ea255ff56eb086f6c3656f1b7e31599aee619749fafb27a35da1e",
+  "original_model_scores_changed": false,
+  "published_records_validated": 128,
+  "published_summary_byte_identical": true,
+  "published_summary_sha256": "f9fef473a46c1cc385b8c63a1adbb0b0a0873d841bded1c50f820934a56123c6",
+  "reference_sha256": "75644ea9dbb71c0d26067f3dcd62043672cc504552e2128c4b192cf2b5c61561",
+  "small_complete_manifest_verdict": "inconclusive"
+}
