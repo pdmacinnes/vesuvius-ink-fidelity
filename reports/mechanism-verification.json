@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-06",
+  "draft_pr": "https://github.com/pdmacinnes/vesuvius-ink-fidelity/pull/3",
+  "experimental_policy_promoted": false,
+  "fresh_confirmation_run": false,
+  "frozen_raw_max_abs_supervised_probability_delta": 0.0,
+  "gpu_deadline_utc": "2026-10-06 18:08",
+  "gpu_jobs_completed_before_deadline": true,
+  "gpu_window_started_utc": "2026-10-06 16:38",
+  "lint": "pass",
+  "local_package_tests_passed": 34,
+  "native_codec_tests_executed": true,
+  "normalization_repeat_probability_hashes_exact": 16,
+  "padding_repeat_probability_hashes_exact": 24,
+  "research_commit": "df28dc5c25aca95d79aa66288356d840b8c42ed3"
+}

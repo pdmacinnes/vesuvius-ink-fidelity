@@ -52,7 +52,7 @@ The mean AP improvement is +0.009668 over four deliberately selected development
 
 ## Controls, repetition and reproduction
 
-The final guarded implementation was run again using the default inputs produced by the public `reproduce` command. All24 padding scores/decoded arrays and all16 normalization scores/probability hashes matched the first runs exactly. Raw and ordinary q8 probability files match the published controls; frozen-raw normalization predictions are bit-identical to the official raw path. Both released seeds use the original FP32/TF32-off contract. The scoped dataset wrapper restores upstream state even when inference fails.
+The final guarded implementation was run again using the default inputs produced by the public `reproduce` command. All24 padding scores/decoded arrays/probability hashes and all16 normalization scores/probability hashes matched the first runs exactly. Raw and ordinary q8 probability files match the published controls; frozen-raw normalization predictions are bit-identical to the official raw path. Both released seeds use the original FP32/TF32-off contract. The scoped dataset wrapper restores upstream state even when inference fails. See the [verification receipt](mechanism-verification.json).
 
 From a prepared repository root:
 

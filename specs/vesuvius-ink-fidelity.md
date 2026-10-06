@@ -130,19 +130,21 @@ These are decision criteria, not results or assurances that compression is unive
 
 ## Acceptance Criteria
 
-- [ ] A refreshed prior-art audit shows a specific remaining ink-compression gap and credits the existing codec, surface-model measurements and ink tooling.
-- [ ] Native Windows installation and a real positive-control ink inference run succeed on the RTX 5070 Ti; any codec WSL dependency is explicit and verified.
-- [ ] At least one complete real CT -> TIFXYZ render -> preprocessing -> official model -> scored output path is demonstrated; a surface-volume-only experiment is labeled as such.
-- [ ] Raw rendering parity is established on a small published reference region with fixed coordinate/depth conventions before compression comparisons.
-- [ ] Raw vs lossless decoded voxels match exactly and repeated/pair inference satisfies the documented numerical tolerance.
-- [ ] At least 12 frozen test windows, at least 6 physical segments, and at least 3 scrolls are scored with paired baselines and both fixed ink_9um seeds; training exposure and non-independent representations are identified.
-- [ ] Supervision/negative masks are respected; no unlabelled pixels are silently treated as trusted background, and undefined metrics carry explicit reasons.
-- [ ] Compression quality and pipeline placement are separated; original chunk origins, padding, halos, physical units, codec bytes and storage overhead are correctly recorded.
-- [ ] A quantitative operating improvement or new material failure with an actionable mitigation passes the preregistered gate on real data; otherwise the original idea is rejected/pivoted.
-- [ ] Results include per-segment and seed deltas, grouped confidence intervals, full denominators, adverse cases, runtime and peak memory. Prediction agreement is never mislabeled as legibility/ground truth.
-- [ ] Tests cover format/frame/mask behavior, lossless round trip, fixed-metric known answers/ties, empty/one-class handling, numerical failures and interruption/resume integrity. Existing relevant upstream checks run and pass.
-- [ ] One clean-cache bounded real-data reproduction completes with recorded input/output hashes and commands; numerical differences meet the declared tolerance.
-- [ ] README/API/PowerShell instructions, data/model provenance, license/notices, benchmark examples, feature map, preregistration and research log are complete and accurate.
-- [ ] Public release artifacts exclude unapproved raw data/labels/weights and potential new textual discoveries; a human-reviewed branch/PR has auto-merge off.
-- [ ] First Letters assessment is updated after each substantive experiment, with eligibility, exposure, raw-evidence support and reasons to proceed/stop. No qualifying discovery is claimed without organizer review.
-- [ ] A submission-ready evidence report is prepared, with conservative prize framing and fresh deadline/rule checks. No completion, adoption or prize claim is made before the corresponding evidence exists.
+- [x] A refreshed prior-art audit shows a specific remaining ink-compression gap and credits the existing codec, surface-model measurements and ink tooling.
+- [x] Native Windows installation and a real positive-control ink inference run succeed on the RTX 5070 Ti; any codec WSL dependency is explicit and verified.
+- [x] At least one complete real CT -> TIFXYZ render -> preprocessing -> official model -> scored output path is demonstrated; a surface-volume-only experiment is labeled as such.
+- [x] Raw rendering parity is established on a small published reference region with fixed coordinate/depth conventions before compression comparisons.
+- [x] Raw vs lossless decoded voxels match exactly and repeated/pair inference satisfies the documented numerical tolerance.
+- [x] At least 12 frozen test windows, at least 6 physical segments, and at least 3 scrolls are scored with paired baselines and both fixed ink_9um seeds; training exposure and non-independent representations are identified.
+- [x] Supervision/negative masks are respected; no unlabelled pixels are silently treated as trusted background, and undefined metrics carry explicit reasons.
+- [x] Compression quality and pipeline placement are separated; original chunk origins, padding, halos, physical units, codec bytes and storage overhead are correctly recorded.
+- [x] A quantitative operating improvement or new material failure with an actionable mitigation passes the preregistered gate on real data; otherwise the original idea is rejected/pivoted.
+- [x] Results include per-segment and seed deltas, grouped confidence intervals, full denominators, adverse cases, runtime and peak memory. Prediction agreement is never mislabeled as legibility/ground truth.
+- [x] Tests cover format/frame/mask behavior, lossless round trip, fixed-metric known answers/ties, empty/one-class handling, numerical failures and interruption/resume integrity. Existing relevant upstream checks run and pass.
+- [x] One clean-cache bounded real-data reproduction completes with recorded input/output hashes and commands; numerical differences meet the declared tolerance.
+- [x] README/API/PowerShell instructions, data/model provenance, license/notices, benchmark examples, feature map, preregistration and research log are complete and accurate.
+- [x] Public release artifacts exclude unapproved raw data/labels/weights and potential new textual discoveries; a human-reviewed branch/PR has auto-merge off.
+- [x] First Letters assessment is updated after each substantive experiment, with eligibility, exposure, raw-evidence support and reasons to proceed/stop. No qualifying discovery is claimed without organizer review.
+- [x] A submission-ready evidence report is prepared, with conservative prize framing and fresh deadline/rule checks. No completion, adoption or prize claim is made before the corresponding evidence exists.
+
+Completion note: the reviewed stable implementation and numerical evidence were released as v0.1.1 on October6,2026. The accepted result is the preregistered material-failure finding, with original/lossless input as mitigation; the q2 improvement hypothesis was rejected. The prize submission is prepared but unsent, and external adoption/award are not established. Follow-up evaluator experiments receive separate review in draft PR #3.
