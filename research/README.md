@@ -2,6 +2,7 @@
 
 - [Ecosystem and opportunity report](ECOSYSTEM_AND_OPPORTUNITIES.md): 12 ranked problems, prior art, subjective estimates, project selection and First Letters assessment.
 - [Research log](LOG.md): hypotheses, corrections, negative preflight results and decisions.
+- [Review handoff](REVIEW_HANDOFF.md): pending PRs, combined69-test verification and safe next release sequence.
 - [Copied label integrity](../reports/LABEL_CACHE_INTEGRITY.md): actual-data corruption/restart reproduction and atomic source-exact repair.
 - [Mechanism follow-up](../reports/MECHANISMS.md): rejected padding policies and mixed normalization counterfactuals, clearly exploratory.
 - [First Letters readiness](FIRST_LETTERS_READINESS.md): current eligible-target assessment and prior-art exclusions.
