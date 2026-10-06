@@ -24,9 +24,9 @@ Status: Patrick reviewed and approved PRs #5/#6/#7 on October6,2026. Release con
 
 ## Acceptance Criteria
 
-- [ ] All reviewed PRs merged manually with reconciled documentation and passing exact-head CI.
-- [ ] Merged69 tests and lint pass, and original summary/reference hashes remain unchanged.
-- [ ] v0.3.0 wheel builds and isolated import/CLI checks pass without GPU.
-- [ ] README/changelog/feature map/handoff accurately reflect reviewed release and limits.
-- [ ] Public source tag and code-only wheel verified, with uploaded SHA-256 matching the local artifact.
-- [ ] No additional outbound message, GPU inference, adoption or First Letters claim.
+- [x] All reviewed PRs merged manually with reconciled documentation and passing exact-head CI.
+- [x] Merged69 tests and lint pass, and original summary/reference hashes remain unchanged.
+- [x] v0.3.0 wheel builds and isolated import/CLI checks pass without GPU.
+- [x] README/changelog/feature map/handoff accurately reflect reviewed release and limits.
+- [x] Public source tag and code-only wheel verified, with uploaded SHA-256 matching the local artifact.
+- [x] No additional outbound message, GPU inference, adoption or First Letters claim.
